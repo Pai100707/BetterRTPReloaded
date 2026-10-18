@@ -1,43 +1,368 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Segíts lefordítani ezt a fájlt több nyelvre!
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z% &c$%price%-ért&7!'
-    Bypass: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z%'
-    Loading: '&aBiztonságos hely kiválasztva! &7Töltés...'
-    Teleport: '&aTeleportálás... &fkérlek várj, míg biztonságos helyet találunk!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z% &c$%price%-ért&7!'
+      actionbar:
+        enable: false
+        text: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z% &c$%price%-ért&7!'
+      title:
+        enable: false
+        text: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z% &c$%price%-ért&7!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&aÁttelepítve ide&7 x=%x% y=%y% z=%z%'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aBiztonságos hely kiválasztva! &7Töltés...'
+      actionbar:
+        enable: false
+        text: '&aBiztonságos hely kiválasztva! &7Töltés...'
+      title:
+        enable: false
+        text: '&aBiztonságos hely kiválasztva! &7Töltés...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTeleportálás... &fkérlek várj, míg biztonságos helyet találunk!'
+      actionbar:
+        enable: false
+        text: '&aTeleportálás... &fkérlek várj, míg biztonságos helyet találunk!'
+      title:
+        enable: false
+        text: '&aTeleportálás... &fkérlek várj, míg biztonságos helyet találunk!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cNem sikerült RTP a nem elegendő pénz miatt! &7Legalább
-      $%price% &7kell lennie az RTP-hez!'
-    NotSafe: '&cNem található biztonságos hely %attempts% próbálkozás után! &7Nem történt
-      RTP!'
-    Hunger: '&cNem sikerült RTP mert... &7túl éhes vagy, egyél valamit!'
+    Price:
+      chat:
+        enable: true
+        text: '&cNem sikerült RTP a nem elegendő pénz miatt! &7Legalább
+          $%price% &7kell lennie az RTP-hez!'
+      actionbar:
+        enable: false
+        text: '&cNem sikerült RTP a nem elegendő pénz miatt! &7Legalább
+          $%price% &7kell lennie az RTP-hez!'
+      title:
+        enable: false
+        text: '&cNem sikerült RTP a nem elegendő pénz miatt! &7Legalább
+          $%price% &7kell lennie az RTP-hez!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cNem található biztonságos hely %attempts% próbálkozás után! &7Nem történt
+          RTP!'
+      actionbar:
+        enable: false
+        text: '&cNem található biztonságos hely %attempts% próbálkozás után! &7Nem történt
+          RTP!'
+      title:
+        enable: false
+        text: '&cNem található biztonságos hely %attempts% próbálkozás után! &7Nem történt
+          RTP!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cNem sikerült RTP mert... &7túl éhes vagy, egyél valamit!'
+      actionbar:
+        enable: false
+        text: '&cNem sikerült RTP mert... &7túl éhes vagy, egyél valamit!'
+      title:
+        enable: false
+        text: '&cNem sikerült RTP mert... &7túl éhes vagy, egyél valamit!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% áttelepítve ide&7 x=%x% y=%y% z=%z%'
-    NotSafe: '&cNem található biztonságos hely %attempts% próbálkozás után! &7%player% nem
-      lett áttelepítve!'
-    Biome: '&cÚgy tűnik, a biome&7 %biome%&c nem létezik! &7Próbáld meg a tab
-      listát használni!'
-  Reload: '&eKonfiguráció sikeresen újratöltve!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% áttelepítve ide&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&a%player% áttelepítve ide&7 x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&a%player% áttelepítve ide&7 x=%x% y=%y% z=%z%'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cNem található biztonságos hely %attempts% próbálkozás után! &7%player% nem
+          lett áttelepítve!'
+      actionbar:
+        enable: false
+        text: '&cNem található biztonságos hely %attempts% próbálkozás után! &7%player% nem
+          lett áttelepítve!'
+      title:
+        enable: false
+        text: '&cNem található biztonságos hely %attempts% próbálkozás után! &7%player% nem
+          lett áttelepítve!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cÚgy tűnik, a biome&7 %biome%&c nem létezik! &7Próbáld meg a tab
+          listát használni!'
+      actionbar:
+        enable: false
+        text: '&cÚgy tűnik, a biome&7 %biome%&c nem létezik! &7Próbáld meg a tab
+          listát használni!'
+      title:
+        enable: false
+        text: '&cÚgy tűnik, a biome&7 %biome%&c nem létezik! &7Próbáld meg a tab
+          listát használni!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eKonfiguráció sikeresen újratöltve!'
+    actionbar:
+      enable: false
+      text: '&eKonfiguráció sikeresen újratöltve!'
+    title:
+      enable: false
+      text: '&eKonfiguráció sikeresen újratöltve!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cSajnáljuk! &7Nincs engedélyed ezt a parancsot használni! &8Engedély:
-      %permission%'
-    World: '&cSajnáljuk! &7Nem engedélyezett RTP a %world% világban! &8Engedély:
-      %permission%'
-  DisabledWorld: '&cLetiltott világ %world%! &7Nem sikerült RTP!'
-  Cooldown: '&cSajnáljuk! &7Még &c%time%&7 várnod kell az RTP-re!'
-  Locked: '&cSajnáljuk! &7Elfogytak a RTP lehetőségeid!'
-  Invalid: '&cÉrvénytelen argumentum. Próbáld ''/%command% help'''
-  NotOnline: '&cA játékos &7%player% &cnem elérhető!'
-  Delay: '&aTeleportálás &f%time% &asec múlva! Ne mozogj!'
-  Moved: '&cMozogtál! &7RTP megszakítva!'
-  NotExist: '&cÚgy tűnik, a világ &7%world% &cnem létezik!'
-  Already: '&cHoppá! &7Úgy tűnik, már RTP-zel, légy türelmes!'
-  Sign: '&7Parancs tábla létrehozva! &7Parancs: ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cSajnáljuk! &7Nincs engedélyed ezt a parancsot használni! &8Engedély:
+          %permission%'
+      actionbar:
+        enable: false
+        text: '&cSajnáljuk! &7Nincs engedélyed ezt a parancsot használni! &8Engedély:
+          %permission%'
+      title:
+        enable: false
+        text: '&cSajnáljuk! &7Nincs engedélyed ezt a parancsot használni! &8Engedély:
+          %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cSajnáljuk! &7Nem engedélyezett RTP a %world% világban! &8Engedély:
+          %permission%'
+      actionbar:
+        enable: false
+        text: '&cSajnáljuk! &7Nem engedélyezett RTP a %world% világban! &8Engedély:
+          %permission%'
+      title:
+        enable: false
+        text: '&cSajnáljuk! &7Nem engedélyezett RTP a %world% világban! &8Engedély:
+          %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cLetiltott világ %world%! &7Nem sikerült RTP!'
+    actionbar:
+      enable: false
+      text: '&cLetiltott világ %world%! &7Nem sikerült RTP!'
+    title:
+      enable: false
+      text: '&cLetiltott világ %world%! &7Nem sikerült RTP!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cSajnáljuk! &7Még &c%time%&7 várnod kell az RTP-re!'
+    actionbar:
+      enable: false
+      text: '&cSajnáljuk! &7Még &c%time%&7 várnod kell az RTP-re!'
+    title:
+      enable: false
+      text: '&cSajnáljuk! &7Még &c%time%&7 várnod kell az RTP-re!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cSajnáljuk! &7Elfogytak a RTP lehetőségeid!'
+    actionbar:
+      enable: false
+      text: '&cSajnáljuk! &7Elfogytak a RTP lehetőségeid!'
+    title:
+      enable: false
+      text: '&cSajnáljuk! &7Elfogytak a RTP lehetőségeid!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cÉrvénytelen argumentum. Próbáld ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cÉrvénytelen argumentum. Próbáld ''/%command% help'''
+    title:
+      enable: false
+      text: '&cÉrvénytelen argumentum. Próbáld ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cA játékos &7%player% &cnem elérhető!'
+    actionbar:
+      enable: false
+      text: '&cA játékos &7%player% &cnem elérhető!'
+    title:
+      enable: false
+      text: '&cA játékos &7%player% &cnem elérhető!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeleportálás &f%time% &asec múlva! Ne mozogj!'
+    actionbar:
+      enable: false
+      text: '&aTeleportálás &f%time% &asec múlva! Ne mozogj!'
+    title:
+      enable: false
+      text: '&aTeleportálás &f%time% &asec múlva! Ne mozogj!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cMozogtál! &7RTP megszakítva!'
+    actionbar:
+      enable: false
+      text: '&cMozogtál! &7RTP megszakítva!'
+    title:
+      enable: false
+      text: '&cMozogtál! &7RTP megszakítva!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cÚgy tűnik, a világ &7%world% &cnem létezik!'
+    actionbar:
+      enable: false
+      text: '&cÚgy tűnik, a világ &7%world% &cnem létezik!'
+    title:
+      enable: false
+      text: '&cÚgy tűnik, a világ &7%world% &cnem létezik!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cHoppá! &7Úgy tűnik, már RTP-zel, légy türelmes!'
+    actionbar:
+      enable: false
+      text: '&cHoppá! &7Úgy tűnik, már RTP-zel, légy türelmes!'
+    title:
+      enable: false
+      text: '&cHoppá! &7Úgy tűnik, már RTP-zel, légy türelmes!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Parancs tábla létrehozva! &7Parancs: ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Parancs tábla létrehozva! &7Parancs: ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7Parancs tábla létrehozva! &7Parancs: ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cHiba! &7Érvénytelen bemenet!'
-    Set: '&bSikeres! &7%type% beállítva erre: %value%'
-    Remove: '&cEltávolítva! &7Eltávolítottad a Custom Világ %world%-ot'
+    Error:
+      chat:
+        enable: true
+        text: '&cHiba! &7Érvénytelen bemenet!'
+      actionbar:
+        enable: false
+        text: '&cHiba! &7Érvénytelen bemenet!'
+      title:
+        enable: false
+        text: '&cHiba! &7Érvénytelen bemenet!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bSikeres! &7%type% beállítva erre: %value%'
+      actionbar:
+        enable: false
+        text: '&bSikeres! &7%type% beállítva erre: %value%'
+      title:
+        enable: false
+        text: '&bSikeres! &7%type% beállítva erre: %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cEltávolítva! &7Eltávolítottad a Custom Világ %world%-ot'
+      actionbar:
+        enable: false
+        text: '&cEltávolítva! &7Eltávolítottad a Custom Világ %world%-ot'
+      title:
+        enable: false
+        text: '&cEltávolítva! &7Eltávolítottad a Custom Világ %world%-ot'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Segítség &e&m-----'

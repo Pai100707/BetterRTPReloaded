@@ -6,6 +6,11 @@
 All language files are located [here](src/main/resources/lang)
 feel free to fork one of the language files and help translate!
 
+## What's new in 3.7.1
+- **Message delivery types** - every message in the language files can be sent as `chat`, `actionbar` and/or `title` (with an independent `subtitle`), in any combination. Placeholders and `&` color codes work in all of them. Only chat is enabled by default, so nothing changes until you turn another type on.
+- **Automatic language file migration** - files from 3.6.x (one plain string per message) are converted on startup. Your customized texts are kept, a backup of the original is saved next to the file as `<name>.pre-3.7.1.bak`, and running it again changes nothing.
+- **Pre-generated RTP positions** - the new `PreloadChunkPosition` section in `config.yml` keeps a pool of safe positions per world and generates the chunks around them in the background, so `/rtp` does not have to wait for terrain generation. Prepared positions are saved in `plugins/BetterRTP/preload-positions.yml` and survive restarts. `keep-loaded` optionally keeps those chunks loaded (Paper only).
+
 ## Libraries
 BetterRTP uses and is compiled with the following libraries:
 
@@ -17,6 +22,10 @@ BetterRTP uses and is compiled with the following libraries:
 The wiki is available [here](../../wiki)!
     
 <p align="center">
+  <b>Java version</b><br/>
+  <a href="https://www.oracle.com/java/technologies/downloads/#java21">
+    <img alt="Java 21" src="https://img.shields.io/badge/Java-21-007396?style=for-the-badge&logo=openjdk">
+  </a><br/>
   <b>Chat with us on Discord</b><br/>
   <a href="https://discord.gg/9upjqmswFY"><img src="https://img.shields.io/discord/1500006030787088404.svg?longCache=true&style=flat-square&label=Discord" alt="Discord" /></a><br/>
   <b>Have a Suggestion? Make an issue!</b><br/>

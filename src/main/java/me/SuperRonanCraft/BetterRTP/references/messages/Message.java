@@ -3,6 +3,9 @@ package me.SuperRonanCraft.BetterRTP.references.messages;
 import com.google.common.collect.ImmutableCollection;
 import lombok.NonNull;
 import me.SuperRonanCraft.BetterRTP.references.file.FileData;
+import me.SuperRonanCraft.BetterRTP.references.messages.delivery.BukkitMessageTree;
+import me.SuperRonanCraft.BetterRTP.references.messages.delivery.MessageDelivery;
+import me.SuperRonanCraft.BetterRTP.references.messages.delivery.MessageEntry;
 import me.SuperRonanCraft.BetterRTP.references.messages.placeholder.PlaceholderAnalyzer;
 import me.SuperRonanCraft.BetterRTP.versions.AsyncHandler;
 import org.bukkit.ChatColor;
@@ -36,6 +39,36 @@ public interface Message {
         if (!msg.isEmpty())
             AsyncHandler.sync(() ->
                     sendi.sendMessage(placeholder(sendi, getPrefix(messenger) + msg, placeholderInfo)));
+    }
+
+    /**
+     * Sends the message stored at {@code path} (for example {@code Messages.Success.Paid}) using every delivery type
+     * (chat / actionbar / title) the administrator enabled for it.
+     *
+     * @param placeholderInfo same objects the other sms methods accept; may be a single object, a List or null
+     */
+    static void deliver(Message messenger, CommandSender sendi, String path, @Nullable Object placeholderInfo) {
+        MessageEntry entry = MessageEntry.read(new BukkitMessageTree(messenger.lang().getConfig(), true), path);
+        deliver(messenger, sendi, entry, placeholderInfo);
+    }
+
+    static void deliver(Message messenger, CommandSender sendi, MessageEntry entry, @Nullable Object placeholderInfo) {
+        if (sendi == null || !entry.anyActive())
+            return;
+        String prefix = getPrefix(messenger);
+        AsyncHandler.sync(() -> MessageDelivery.send(sendi, entry, prefix, text -> applyInfo(sendi, text, placeholderInfo)));
+    }
+
+    /**
+     * Applies placeholders for either a single info object or a list of them. Lists have to go through the
+     * List overload explicitly: the Object overload would hand them straight back to itself.
+     */
+    @SuppressWarnings("unchecked")
+    @Nullable
+    static String applyInfo(@Nullable CommandSender p, String text, @Nullable Object info) {
+        if (info instanceof List<?>)
+            return placeholder(p, text, (List<Object>) info);
+        return placeholder(p, text, info);
     }
 
     static void sms(CommandSender sendi, List<String> msg, Object placeholderInfo) {

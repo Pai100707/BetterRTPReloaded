@@ -1,0 +1,390 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
+# ภาษาไทย (Thai) - ช่วยกันแปลไฟล์นี้เป็นภาษาอื่นๆ ด้วยนะ!
+Messages:
+  Prefix: '&7[&6BetterRTP&7] '
+  Success: ## ตัวแปร! %x% %y% และ %z% คือพิกัด x, y, z ที่ผู้เล่นกำลังจะถูกวาร์ปไป! #
+    Paid:
+      chat:
+        enable: true
+        text: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว หักเงิน &c$%price%&7!'
+      actionbar:
+        enable: false
+        text: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว หักเงิน &c$%price%&7!'
+      title:
+        enable: false
+        text: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว หักเงิน &c$%price%&7!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+      actionbar:
+        enable: false
+        text: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+      title:
+        enable: false
+        text: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aเจอจุดที่ปลอดภัยแล้ว! &7กำลังโหลดชังก์...'
+      actionbar:
+        enable: false
+        text: '&aเจอจุดที่ปลอดภัยแล้ว! &7กำลังโหลดชังก์...'
+      title:
+        enable: false
+        text: '&aเจอจุดที่ปลอดภัยแล้ว! &7กำลังโหลดชังก์...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aกำลังวาร์ป... &fรอสักครู่ ระบบกำลังหาจุดที่ปลอดภัย!'
+      actionbar:
+        enable: false
+        text: '&aกำลังวาร์ป... &fรอสักครู่ ระบบกำลังหาจุดที่ปลอดภัย!'
+      title:
+        enable: false
+        text: '&aกำลังวาร์ป... &fรอสักครู่ ระบบกำลังหาจุดที่ปลอดภัย!'
+        subtitle:
+          enable: false
+          text: ''
+  Failed:
+    Price:
+      chat:
+        enable: true
+        text: '&cสุ่มวาร์ปไม่ได้ เพราะเงินไม่พอ! &7ต้องมีอย่างน้อย $%price% &7ถึงจะสุ่มวาร์ปได้!'
+      actionbar:
+        enable: false
+        text: '&cสุ่มวาร์ปไม่ได้ เพราะเงินไม่พอ! &7ต้องมีอย่างน้อย $%price% &7ถึงจะสุ่มวาร์ปได้!'
+      title:
+        enable: false
+        text: '&cสุ่มวาร์ปไม่ได้ เพราะเงินไม่พอ! &7ต้องมีอย่างน้อย $%price% &7ถึงจะสุ่มวาร์ปได้!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7คุณไม่ได้ถูกสุ่มวาร์ป!'
+      actionbar:
+        enable: false
+        text: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7คุณไม่ได้ถูกสุ่มวาร์ป!'
+      title:
+        enable: false
+        text: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7คุณไม่ได้ถูกสุ่มวาร์ป!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cสุ่มวาร์ปไม่ได้ เพราะคุณ... &7หิวเกินไป&c ไปกินอะไรก่อนนะ!'
+      actionbar:
+        enable: false
+        text: '&cสุ่มวาร์ปไม่ได้ เพราะคุณ... &7หิวเกินไป&c ไปกินอะไรก่อนนะ!'
+      title:
+        enable: false
+        text: '&cสุ่มวาร์ปไม่ได้ เพราะคุณ... &7หิวเกินไป&c ไปกินอะไรก่อนนะ!'
+        subtitle:
+          enable: false
+          text: ''
+  Other:
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% ถูกวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+      actionbar:
+        enable: false
+        text: '&a%player% ถูกวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+      title:
+        enable: false
+        text: '&a%player% ถูกวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7%player% ไม่ได้ถูกสุ่มวาร์ป!'
+      actionbar:
+        enable: false
+        text: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7%player% ไม่ได้ถูกสุ่มวาร์ป!'
+      title:
+        enable: false
+        text: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7%player% ไม่ได้ถูกสุ่มวาร์ป!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cดูเหมือนไบโอม&7 %biome%&c จะไม่มีอยู่จริง! &7ลองใช้ลิสต์ที่กด Tab ดูนะ!'
+      actionbar:
+        enable: false
+        text: '&cดูเหมือนไบโอม&7 %biome%&c จะไม่มีอยู่จริง! &7ลองใช้ลิสต์ที่กด Tab ดูนะ!'
+      title:
+        enable: false
+        text: '&cดูเหมือนไบโอม&7 %biome%&c จะไม่มีอยู่จริง! &7ลองใช้ลิสต์ที่กด Tab ดูนะ!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eรีโหลดคอนฟิกสำเร็จแล้ว!'
+    actionbar:
+      enable: false
+      text: '&eรีโหลดคอนฟิกสำเร็จแล้ว!'
+    title:
+      enable: false
+      text: '&eรีโหลดคอนฟิกสำเร็จแล้ว!'
+      subtitle:
+        enable: false
+        text: ''
+  Update:
+    chat:
+      enable: true
+      text: '&7มีอัปเดตใหม่ของ &6BetterRTP &7เวอร์ชัน &e#%newVersion% &7คุณใช้เวอร์ชัน &e#%currentVersion%'
+    actionbar:
+      enable: false
+      text: '&7มีอัปเดตใหม่ของ &6BetterRTP &7เวอร์ชัน &e#%newVersion% &7คุณใช้เวอร์ชัน &e#%currentVersion%'
+    title:
+      enable: false
+      text: '&7มีอัปเดตใหม่ของ &6BetterRTP &7เวอร์ชัน &e#%newVersion% &7คุณใช้เวอร์ชัน &e#%currentVersion%'
+      subtitle:
+        enable: false
+        text: ''
+  NoPermission:
+    Basic:
+      chat:
+        enable: true
+        text: '&cขออภัย! &7คุณไม่มีสิทธิ์ใช้คำสั่งนี้! &8สิทธิ์: %permission%'
+      actionbar:
+        enable: false
+        text: '&cขออภัย! &7คุณไม่มีสิทธิ์ใช้คำสั่งนี้! &8สิทธิ์: %permission%'
+      title:
+        enable: false
+        text: '&cขออภัย! &7คุณไม่มีสิทธิ์ใช้คำสั่งนี้! &8สิทธิ์: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cขออภัย! &7คุณไม่ได้รับอนุญาตให้สุ่มวาร์ปในโลก %world%! &8สิทธิ์: %permission%'
+      actionbar:
+        enable: false
+        text: '&cขออภัย! &7คุณไม่ได้รับอนุญาตให้สุ่มวาร์ปในโลก %world%! &8สิทธิ์: %permission%'
+      title:
+        enable: false
+        text: '&cขออภัย! &7คุณไม่ได้รับอนุญาตให้สุ่มวาร์ปในโลก %world%! &8สิทธิ์: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cโลก %world% ถูกปิดใช้งาน! &7สุ่มวาร์ปไม่ได้!'
+    actionbar:
+      enable: false
+      text: '&cโลก %world% ถูกปิดใช้งาน! &7สุ่มวาร์ปไม่ได้!'
+    title:
+      enable: false
+      text: '&cโลก %world% ถูกปิดใช้งาน! &7สุ่มวาร์ปไม่ได้!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cขออภัย! &7คุณต้องรออีก &c%time%&7 ถึงจะสุ่มวาร์ปได้อีก!'
+    actionbar:
+      enable: false
+      text: '&cขออภัย! &7คุณต้องรออีก &c%time%&7 ถึงจะสุ่มวาร์ปได้อีก!'
+    title:
+      enable: false
+      text: '&cขออภัย! &7คุณต้องรออีก &c%time%&7 ถึงจะสุ่มวาร์ปได้อีก!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cขออภัย! &7คุณใช้สิทธิ์สุ่มวาร์ปหมดแล้ว!'
+    actionbar:
+      enable: false
+      text: '&cขออภัย! &7คุณใช้สิทธิ์สุ่มวาร์ปหมดแล้ว!'
+    title:
+      enable: false
+      text: '&cขออภัย! &7คุณใช้สิทธิ์สุ่มวาร์ปหมดแล้ว!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cอาร์กิวเมนต์ไม่ถูกต้อง ลองพิมพ์ ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cอาร์กิวเมนต์ไม่ถูกต้อง ลองพิมพ์ ''/%command% help'''
+    title:
+      enable: false
+      text: '&cอาร์กิวเมนต์ไม่ถูกต้อง ลองพิมพ์ ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cผู้เล่น &7%player% &cไม่ได้ออนไลน์อยู่!'
+    actionbar:
+      enable: false
+      text: '&cผู้เล่น &7%player% &cไม่ได้ออนไลน์อยู่!'
+    title:
+      enable: false
+      text: '&cผู้เล่น &7%player% &cไม่ได้ออนไลน์อยู่!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aจะวาร์ปใน &f%time% &aวินาที! อย่าขยับ!'
+    actionbar:
+      enable: false
+      text: '&aจะวาร์ปใน &f%time% &aวินาที! อย่าขยับ!'
+    title:
+      enable: false
+      text: '&aจะวาร์ปใน &f%time% &aวินาที! อย่าขยับ!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cคุณขยับตัว! &7ยกเลิกการสุ่มวาร์ปแล้ว!'
+    actionbar:
+      enable: false
+      text: '&cคุณขยับตัว! &7ยกเลิกการสุ่มวาร์ปแล้ว!'
+    title:
+      enable: false
+      text: '&cคุณขยับตัว! &7ยกเลิกการสุ่มวาร์ปแล้ว!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cดูเหมือนจะไม่มีโลก &7%world% &cอยู่จริง!'
+    actionbar:
+      enable: false
+      text: '&cดูเหมือนจะไม่มีโลก &7%world% &cอยู่จริง!'
+    title:
+      enable: false
+      text: '&cดูเหมือนจะไม่มีโลก &7%world% &cอยู่จริง!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cเดี๋ยวก่อน! &7คุณกำลังสุ่มวาร์ปอยู่ รอสักหน่อยนะ!'
+    actionbar:
+      enable: false
+      text: '&cเดี๋ยวก่อน! &7คุณกำลังสุ่มวาร์ปอยู่ รอสักหน่อยนะ!'
+    title:
+      enable: false
+      text: '&cเดี๋ยวก่อน! &7คุณกำลังสุ่มวาร์ปอยู่ รอสักหน่อยนะ!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7สร้างป้ายคำสั่งแล้ว! &7คำสั่งคือ... ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7สร้างป้ายคำสั่งแล้ว! &7คำสั่งคือ... ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7สร้างป้ายคำสั่งแล้ว! &7คำสั่งคือ... ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
+  Edit:
+    Error:
+      chat:
+        enable: true
+        text: '&cผิดพลาด! &7ข้อมูลที่ใส่ไม่ถูกต้อง!'
+      actionbar:
+        enable: false
+        text: '&cผิดพลาด! &7ข้อมูลที่ใส่ไม่ถูกต้อง!'
+      title:
+        enable: false
+        text: '&cผิดพลาด! &7ข้อมูลที่ใส่ไม่ถูกต้อง!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bสำเร็จ! &7ตั้งค่า %type% เป็น %value% แล้ว'
+      actionbar:
+        enable: false
+        text: '&bสำเร็จ! &7ตั้งค่า %type% เป็น %value% แล้ว'
+      title:
+        enable: false
+        text: '&bสำเร็จ! &7ตั้งค่า %type% เป็น %value% แล้ว'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cลบแล้ว! &7คุณลบ Custom World %world% แล้ว'
+      actionbar:
+        enable: false
+        text: '&cลบแล้ว! &7คุณลบ Custom World %world% แล้ว'
+      title:
+        enable: false
+        text: '&cลบแล้ว! &7คุณลบ Custom World %world% แล้ว'
+        subtitle:
+          enable: false
+          text: ''
+
+Help:
+  Prefix: '&e&m-----&6&l BetterRTP &8| ความช่วยเหลือ &e&m-----'
+  Main: ' &7- &e/%command% &7- สุ่มวาร์ปตัวคุณเอง!'
+  Biome: ' &7- &e/%command% biome <biome1, biome2...> &7- สุ่มวาร์ปภายในไบโอมที่เลือก'
+  Edit: ' &7- &e/%command% edit <default/world> [args...] &7- แก้ไขการตั้งค่าของปลั๊กอิน'
+  Help: ' &7- &e/%command% help &7- แสดงรายการคำสั่ง'
+  Info: ' &7- &e/%command% info [world/particles/shapes/potion_effects] &7- ดูข้อมูลเฉพาะของพารามิเตอร์ในปลั๊กอิน'
+  Player: ' &7- &e/%command% player <player> [world] [biome1, biome2...] &7- สุ่มวาร์ปผู้เล่นคนอื่น'
+  Reload: ' &7- &e/%command% reload &7- รีโหลดปลั๊กอิน'
+  Settings: ' &7- &e/%command% settings &7- เปิด GUI เพื่อแก้ไขการตั้งค่า'
+  Test: ' &7- &e/%command% test &7- ทดสอบเอฟเฟกต์หลังวาร์ปโดยไม่ต้องย้ายตำแหน่ง'
+  Version: ' &7- &e/%command% version &7- ดูเวอร์ชันที่กำลังใช้งาน'
+  World: ' &7- &e/%command% world <world> [biome1, biome2...] &7- สุ่มวาร์ปในโลกอื่น'
+  Location: ' &7- &e/%command% location <location_name> &7- สุ่มวาร์ปโดยใช้โลเคชันที่กำหนด'
+
+Usage:
+  Player: '&cวิธีใช้&7: /%command% player <player> [world] [biome1, biome2]'
+  World: '&cวิธีใช้&7: /%command% world <world> [biome1, biome2...]'
+  Biome: '&cวิธีใช้&7: /%command% biome <biome1, biome2...>'
+  Location: '&cวิธีใช้&7: /%command% location <location_name>'
+  Edit:
+    Base: '&cวิธีใช้&7: /%command% edit <default/world> [args...]'
+    Default: '&cวิธีใช้&7: /%command% edit default <max/min/useworldborder/center> <value>'
+    World: '&cวิธีใช้&7: /%command% edit customworld <world> <max/min/useworldborder/center> <value>'
+    PermissionGroup: '&cวิธีใช้&7: /%command% edit permission_group <group> <world> <max/min/useworldborder/center> <value>'
+    Location: '&cวิธีใช้&7: /%command% edit location <location_name> <max/min/useworldborder/center> <value>'
+    Worldtype: '&cวิธีใช้&7: /%command% edit world_type <world> <NETHER/NORMAL>'
+    Override: '&cวิธีใช้&7: /%command% edit override <world> <world_to>'
+    BlacklistedBlocks: '&cวิธีใช้&7: /%command% edit blacklistedblocks <add/remove> <block_id>'

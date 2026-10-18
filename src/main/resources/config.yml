@@ -173,3 +173,35 @@ PermissionGroup: #Player requires "betterrtp.group.<group_name>" to trigger thes
             MinRadius: 10000
             Price: 15
             Cooldown: 1500
+
+# Pre-generates RTP positions and their surrounding chunks for faster teleports.
+# Configure each world using its exact world name (names containing a '.' are not supported here).
+# Prepared positions are saved in plugins/BetterRTP/preload-positions.yml and survive restarts.
+# A prepared position is only handed out when it fits the radius/shape of the player's RTP settings,
+# otherwise the normal RTP (and the Queue above) is used. Positions are re-checked when they are used.
+# Generation runs in the background, one position at a time, so it will not freeze the server.
+# Worlds listed in DisabledWorlds are skipped.
+PreloadChunkPosition:
+  world:
+    # Enable or disable pre-generated RTP positions for this world.
+    enable: true
+
+    # Number of RTP positions to maintain for this world. (1 - 500)
+    positions: 10
+
+    # Chunk radius to generate around each position. (0 - 16)
+    # A radius of 2 covers a 5x5 area, or up to 25 chunks per position.
+    # This generates chunks in advance; it does not automatically keep them loaded.
+    chunks-gen-radius: 2
+
+    # Keep the relevant chunks loaded after generation.
+    # false = allow normal chunk unloading.
+    # Needs Paper (plugin chunk tickets). Kept chunks are released again once their position was used.
+    keep-loaded: false
+
+    # Chunk loading type: active or lazy.
+    # active = keep the chunks loaded with a Paper plugin chunk ticket.
+    # lazy = accepted, but the Paper API only offers one kind of plugin chunk ticket, so on
+    #        current Paper versions it behaves exactly like active.
+    # Only used when keep-loaded is true.
+    keep-loaded-chunk-type: active

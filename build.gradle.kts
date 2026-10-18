@@ -80,7 +80,7 @@ configurations.all {
 }
 
 group = "me.SuperRonanCraft"
-version = "3.6.13"
+version = "3.7.1"
 description = "BetterRTPReloaded"
 
 java {
@@ -90,6 +90,14 @@ java {
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
     options.release.set(21)
+}
+
+// plugin.yml uses the Maven style ${project.version}; fill it in so the jar reports the real version
+tasks.processResources {
+    inputs.property("version", project.version)
+    filesMatching("plugin.yml") {
+        expand("project" to mapOf("version" to project.version))
+    }
 }
 
 tasks.withType<Javadoc> {

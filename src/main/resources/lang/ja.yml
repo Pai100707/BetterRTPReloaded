@@ -1,32 +1,249 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Translation author: ViaSnake (GitHub)
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aあなたは&c$%price%&aで&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
-    Bypass: '&aあなたは&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+    Paid:
+      chat:
+        enable: true
+        text: '&aあなたは&c$%price%&aで&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+      actionbar:
+        enable: false
+        text: '&aあなたは&c$%price%&aで&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+      title:
+        enable: false
+        text: '&aあなたは&c$%price%&aで&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aあなたは&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+      actionbar:
+        enable: false
+        text: '&aあなたは&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+      title:
+        enable: false
+        text: '&aあなたは&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でTPされました！'
+        subtitle:
+          enable: false
+          text: ''
 #    Loading: '&aSafe spot located! &7Loading chunks...'
 #    Teleport: '&aTeleporting... &fplease wait while we find a safe location!'
   Failed:
-    Price: '&c資金が不十分のためRTPできませんでした！ &7RTPには最低$%price%&7が必要です！'
-    NotSafe: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7あなたははRTPされませんでした！'
+    Price:
+      chat:
+        enable: true
+        text: '&c資金が不十分のためRTPできませんでした！ &7RTPには最低$%price%&7が必要です！'
+      actionbar:
+        enable: false
+        text: '&c資金が不十分のためRTPできませんでした！ &7RTPには最低$%price%&7が必要です！'
+      title:
+        enable: false
+        text: '&c資金が不十分のためRTPできませんでした！ &7RTPには最低$%price%&7が必要です！'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7あなたははRTPされませんでした！'
+      actionbar:
+        enable: false
+        text: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7あなたははRTPされませんでした！'
+      title:
+        enable: false
+        text: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7あなたははRTPされませんでした！'
+        subtitle:
+          enable: false
+          text: ''
 #    Hunger: '&cCould not rtp because you are... &7too hungry&c, eat something fella!'
   Other:
-    Success: '&a%player%が&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でテレポートしました！'
-    NotSafe: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7%player%はRTPされませんでした！'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player%が&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でテレポートしました！'
+      actionbar:
+        enable: false
+        text: '&a%player%が&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でテレポートしました！'
+      title:
+        enable: false
+        text: '&a%player%が&7x=%x% y=%y% z=%z% に&f%attempts%&7回の試行でテレポートしました！'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7%player%はRTPされませんでした！'
+      actionbar:
+        enable: false
+        text: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7%player%はRTPされませんでした！'
+      title:
+        enable: false
+        text: '&c%attempts%回の試行で安全な場所が見つかりませんでした！ &7%player%はRTPされませんでした！'
+        subtitle:
+          enable: false
+          text: ''
 #    Biome: '&cSeems like the biome&7 %biome%&c does not exist! &7Try using the tab list!'
-  Reload: '&eコンフィグは正常にリロードされました！'
+  Reload:
+    chat:
+      enable: true
+      text: '&eコンフィグは正常にリロードされました！'
+    actionbar:
+      enable: false
+      text: '&eコンフィグは正常にリロードされました！'
+    title:
+      enable: false
+      text: '&eコンフィグは正常にリロードされました！'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cごめんなさい！ &7このコマンドを使う権限がありません！ &8Permission: %permission%'
-    World: '&cごめんなさい！ &7ワールド%world%ではrtpが許可されていません！ &8Permission: %permission%'
-  DisabledWorld: '&cワールド%world%は無効です！ &7RTPできませんでした！'
-  Cooldown: '&cごめんなさい！ &7あなたは&c%time%&7秒間RTPできません！'
-  Locked: '&cSorry! &7You''ve used up all your RTP''s!'
-  Invalid: '&c無効な引数。 ''/%command% help''を試してください。'
-  NotOnline: '&cプレイヤー&7%player%&cはオンラインではありません！'
-  Delay: '&f%time%&a秒でテレポートします！ 動かないで！'
-  Moved: '&cあなたは移動しました！ &7RTPはキャンセルされました！'
-  NotExist: '&cワールド&7%world%&cが存在しないようです。'
-  Already: '&cおっと！ &7あなたはすでにRTPしているように見えます。'
+    Basic:
+      chat:
+        enable: true
+        text: '&cごめんなさい！ &7このコマンドを使う権限がありません！ &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cごめんなさい！ &7このコマンドを使う権限がありません！ &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cごめんなさい！ &7このコマンドを使う権限がありません！ &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cごめんなさい！ &7ワールド%world%ではrtpが許可されていません！ &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cごめんなさい！ &7ワールド%world%ではrtpが許可されていません！ &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cごめんなさい！ &7ワールド%world%ではrtpが許可されていません！ &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cワールド%world%は無効です！ &7RTPできませんでした！'
+    actionbar:
+      enable: false
+      text: '&cワールド%world%は無効です！ &7RTPできませんでした！'
+    title:
+      enable: false
+      text: '&cワールド%world%は無効です！ &7RTPできませんでした！'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cごめんなさい！ &7あなたは&c%time%&7秒間RTPできません！'
+    actionbar:
+      enable: false
+      text: '&cごめんなさい！ &7あなたは&c%time%&7秒間RTPできません！'
+    title:
+      enable: false
+      text: '&cごめんなさい！ &7あなたは&c%time%&7秒間RTPできません！'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cSorry! &7You''ve used up all your RTP''s!'
+    actionbar:
+      enable: false
+      text: '&cSorry! &7You''ve used up all your RTP''s!'
+    title:
+      enable: false
+      text: '&cSorry! &7You''ve used up all your RTP''s!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&c無効な引数。 ''/%command% help''を試してください。'
+    actionbar:
+      enable: false
+      text: '&c無効な引数。 ''/%command% help''を試してください。'
+    title:
+      enable: false
+      text: '&c無効な引数。 ''/%command% help''を試してください。'
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cプレイヤー&7%player%&cはオンラインではありません！'
+    actionbar:
+      enable: false
+      text: '&cプレイヤー&7%player%&cはオンラインではありません！'
+    title:
+      enable: false
+      text: '&cプレイヤー&7%player%&cはオンラインではありません！'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&f%time%&a秒でテレポートします！ 動かないで！'
+    actionbar:
+      enable: false
+      text: '&f%time%&a秒でテレポートします！ 動かないで！'
+    title:
+      enable: false
+      text: '&f%time%&a秒でテレポートします！ 動かないで！'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cあなたは移動しました！ &7RTPはキャンセルされました！'
+    actionbar:
+      enable: false
+      text: '&cあなたは移動しました！ &7RTPはキャンセルされました！'
+    title:
+      enable: false
+      text: '&cあなたは移動しました！ &7RTPはキャンセルされました！'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cワールド&7%world%&cが存在しないようです。'
+    actionbar:
+      enable: false
+      text: '&cワールド&7%world%&cが存在しないようです。'
+    title:
+      enable: false
+      text: '&cワールド&7%world%&cが存在しないようです。'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cおっと！ &7あなたはすでにRTPしているように見えます。'
+    actionbar:
+      enable: false
+      text: '&cおっと！ &7あなたはすでにRTPしているように見えます。'
+    title:
+      enable: false
+      text: '&cおっと！ &7あなたはすでにRTPしているように見えます。'
+      subtitle:
+        enable: false
+        text: ''
 #  Sign: '&7Command sign has been created! &7Command is... ''&f/rtp %command%&7'''
 #  Edit:
 #    Error: '&cError! &7Invalid input provided!'
