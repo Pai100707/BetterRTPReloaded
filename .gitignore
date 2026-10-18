@@ -10,3 +10,8 @@ BetterRTP.wiki/
 .DS_Store
 .vscode/
 node_modules/
+
+build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+!lib/*.jar
