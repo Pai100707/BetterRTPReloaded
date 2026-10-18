@@ -1,0 +1,65 @@
+# ภาษาไทย (Thai) - ช่วยกันแปลไฟล์นี้เป็นภาษาอื่นๆ ด้วยนะ!
+Messages:
+  Prefix: '&7[&6BetterRTP&7] '
+  Success: ## ตัวแปร! %x% %y% และ %z% คือพิกัด x, y, z ที่ผู้เล่นกำลังจะถูกวาร์ปไป! #
+    Paid: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว หักเงิน &c$%price%&7!'
+    Bypass: '&aวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+    Loading: '&aเจอจุดที่ปลอดภัยแล้ว! &7กำลังโหลดชังก์...'
+    Teleport: '&aกำลังวาร์ป... &fรอสักครู่ ระบบกำลังหาจุดที่ปลอดภัย!'
+  Failed:
+    Price: '&cสุ่มวาร์ปไม่ได้ เพราะเงินไม่พอ! &7ต้องมีอย่างน้อย $%price% &7ถึงจะสุ่มวาร์ปได้!'
+    NotSafe: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7คุณไม่ได้ถูกสุ่มวาร์ป!'
+    Hunger: '&cสุ่มวาร์ปไม่ได้ เพราะคุณ... &7หิวเกินไป&c ไปกินอะไรก่อนนะ!'
+  Other:
+    Success: '&a%player% ถูกวาร์ปไปที่&7 x=%x% y=%y% z=%z% แล้ว'
+    NotSafe: '&cหาจุดที่ปลอดภัยไม่เจอภายใน %attempts% ครั้ง! &7%player% ไม่ได้ถูกสุ่มวาร์ป!'
+    Biome: '&cดูเหมือนไบโอม&7 %biome%&c จะไม่มีอยู่จริง! &7ลองใช้ลิสต์ที่กด Tab ดูนะ!'
+  Reload: '&eรีโหลดคอนฟิกสำเร็จแล้ว!'
+  Update: '&7มีอัปเดตใหม่ของ &6BetterRTP &7เวอร์ชัน &e#%newVersion% &7คุณใช้เวอร์ชัน &e#%currentVersion%'
+  NoPermission:
+    Basic: '&cขออภัย! &7คุณไม่มีสิทธิ์ใช้คำสั่งนี้! &8สิทธิ์: %permission%'
+    World: '&cขออภัย! &7คุณไม่ได้รับอนุญาตให้สุ่มวาร์ปในโลก %world%! &8สิทธิ์: %permission%'
+  DisabledWorld: '&cโลก %world% ถูกปิดใช้งาน! &7สุ่มวาร์ปไม่ได้!'
+  Cooldown: '&cขออภัย! &7คุณต้องรออีก &c%time%&7 ถึงจะสุ่มวาร์ปได้อีก!'
+  Locked: '&cขออภัย! &7คุณใช้สิทธิ์สุ่มวาร์ปหมดแล้ว!'
+  Invalid: '&cอาร์กิวเมนต์ไม่ถูกต้อง ลองพิมพ์ ''/%command% help'''
+  NotOnline: '&cผู้เล่น &7%player% &cไม่ได้ออนไลน์อยู่!'
+  Delay: '&aจะวาร์ปใน &f%time% &aวินาที! อย่าขยับ!'
+  Moved: '&cคุณขยับตัว! &7ยกเลิกการสุ่มวาร์ปแล้ว!'
+  NotExist: '&cดูเหมือนจะไม่มีโลก &7%world% &cอยู่จริง!'
+  Already: '&cเดี๋ยวก่อน! &7คุณกำลังสุ่มวาร์ปอยู่ รอสักหน่อยนะ!'
+  Sign: '&7สร้างป้ายคำสั่งแล้ว! &7คำสั่งคือ... ''&f/rtp %command%&7'''
+  Edit:
+    Error: '&cผิดพลาด! &7ข้อมูลที่ใส่ไม่ถูกต้อง!'
+    Set: '&bสำเร็จ! &7ตั้งค่า %type% เป็น %value% แล้ว'
+    Remove: '&cลบแล้ว! &7คุณลบ Custom World %world% แล้ว'
+
+Help:
+  Prefix: '&e&m-----&6&l BetterRTP &8| ความช่วยเหลือ &e&m-----'
+  Main: ' &7- &e/%command% &7- สุ่มวาร์ปตัวคุณเอง!'
+  Biome: ' &7- &e/%command% biome <biome1, biome2...> &7- สุ่มวาร์ปภายในไบโอมที่เลือก'
+  Edit: ' &7- &e/%command% edit <default/world> [args...] &7- แก้ไขการตั้งค่าของปลั๊กอิน'
+  Help: ' &7- &e/%command% help &7- แสดงรายการคำสั่ง'
+  Info: ' &7- &e/%command% info [world/particles/shapes/potion_effects] &7- ดูข้อมูลเฉพาะของพารามิเตอร์ในปลั๊กอิน'
+  Player: ' &7- &e/%command% player <player> [world] [biome1, biome2...] &7- สุ่มวาร์ปผู้เล่นคนอื่น'
+  Reload: ' &7- &e/%command% reload &7- รีโหลดปลั๊กอิน'
+  Settings: ' &7- &e/%command% settings &7- เปิด GUI เพื่อแก้ไขการตั้งค่า'
+  Test: ' &7- &e/%command% test &7- ทดสอบเอฟเฟกต์หลังวาร์ปโดยไม่ต้องย้ายตำแหน่ง'
+  Version: ' &7- &e/%command% version &7- ดูเวอร์ชันที่กำลังใช้งาน'
+  World: ' &7- &e/%command% world <world> [biome1, biome2...] &7- สุ่มวาร์ปในโลกอื่น'
+  Location: ' &7- &e/%command% location <location_name> &7- สุ่มวาร์ปโดยใช้โลเคชันที่กำหนด'
+
+Usage:
+  Player: '&cวิธีใช้&7: /%command% player <player> [world] [biome1, biome2]'
+  World: '&cวิธีใช้&7: /%command% world <world> [biome1, biome2...]'
+  Biome: '&cวิธีใช้&7: /%command% biome <biome1, biome2...>'
+  Location: '&cวิธีใช้&7: /%command% location <location_name>'
+  Edit:
+    Base: '&cวิธีใช้&7: /%command% edit <default/world> [args...]'
+    Default: '&cวิธีใช้&7: /%command% edit default <max/min/useworldborder/center> <value>'
+    World: '&cวิธีใช้&7: /%command% edit customworld <world> <max/min/useworldborder/center> <value>'
+    PermissionGroup: '&cวิธีใช้&7: /%command% edit permission_group <group> <world> <max/min/useworldborder/center> <value>'
+    Location: '&cวิธีใช้&7: /%command% edit location <location_name> <max/min/useworldborder/center> <value>'
+    Worldtype: '&cวิธีใช้&7: /%command% edit world_type <world> <NETHER/NORMAL>'
+    Override: '&cวิธีใช้&7: /%command% edit override <world> <world_to>'
+    BlacklistedBlocks: '&cวิธีใช้&7: /%command% edit blacklistedblocks <add/remove> <block_id>'

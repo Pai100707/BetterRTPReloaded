@@ -17,6 +17,10 @@ BetterRTP uses and is compiled with the following libraries:
 The wiki is available [here](../../wiki)!
     
 <p align="center">
+  <b>Java version</b><br/>
+  <a href="https://www.oracle.com/java/technologies/downloads/#java21">
+    <img alt="Java 21" src="https://img.shields.io/badge/Java-21-007396?style=for-the-badge&logo=openjdk">
+  </a><br/>
   <b>Chat with us on Discord</b><br/>
   <a href="https://discord.gg/9upjqmswFY"><img src="https://img.shields.io/discord/1500006030787088404.svg?longCache=true&style=flat-square&label=Discord" alt="Discord" /></a><br/>
   <b>Have a Suggestion? Make an issue!</b><br/>

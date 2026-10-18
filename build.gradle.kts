@@ -80,7 +80,7 @@ configurations.all {
 }
 
 group = "me.SuperRonanCraft"
-version = "3.6.13"
+version = "3.6.14"
 description = "BetterRTPReloaded"
 
 java {
