@@ -1,6 +1,12 @@
 # BetterRTP plugin by SuperRonanCraft! (Join my Public Server at ronanplugins.com) #
 # Need help? go to https://ronanplugins.com/discord! #
 
+## DO NOT CHANGE THIS VALUE!
+## It is the layout version of this file (3.7.2 -> 372, 3.8.1 -> 381) and is set by BetterRTP itself. When a plugin
+## update changes how this file is laid out, BetterRTP uses it to update your file automatically (a backup is saved
+## next to it). The value is the last plugin version that updated this config, it is not the plugin version.
+config-version: 372
+
 Language-File: 'en.yml'
 
 Settings:
@@ -102,16 +108,24 @@ BlacklistedBlocks:
   - oak_leaves
   - jungle_leaves
   - kelp
+  - powder_snow
 
 ## Worlds to NOT allow /rtp in, unless there is an override to another enabled world #
 DisabledWorlds:
-  - prison
-  - creative
+  ## true = the worlds in the list below are disabled, false = this option is ignored
+  enable: false
+  list:
+    #- prison
+    #- creative
 
 ## Worlds you want to have a custom min/max and spawn center in #
 ## [MaxRadius] and [MinRadius] MUST be positive! These cannot be equal to each other!
+## Use the exact world name. Works for every world, including the default ones:
+## world, world_nether and world_the_end (see the examples at the end of this list).
+## Every world has an `enable` option: true = use the settings of that world, false = use the Default settings.
 CustomWorlds:
   - custom_world_1:
+      enable: true
       UseWorldBorder: false
       ## If UseWorldBorder is true, everything will be ignored EXCEPT "MinRadius"!
       MaxRadius: 1000
@@ -124,6 +138,7 @@ CustomWorlds:
       MinY: 0
       Cooldown: 60
   - other_custom_world:
+      enable: true
       MaxRadius: 10000
       MinRadius: 150
       CenterX: 123
@@ -135,12 +150,40 @@ CustomWorlds:
         - 'forest'
       Shape: 'circle'
       RTPOnDeath: true
+  ## The default worlds. They are switched off (enable: false), so they use the Default settings until you turn them on.
+  ## The Nether needs `world_nether: NETHER` in WorldType below (already set) and a MinY/MaxY inside the nether (0 - 127).
+  - world:
+      enable: false
+      UseWorldBorder: false
+      MaxRadius: 5000
+      MinRadius: 100
+      CenterX: 0
+      CenterZ: 0
+  - world_nether:
+      enable: false
+      UseWorldBorder: false
+      MaxRadius: 1000
+      MinRadius: 50
+      CenterX: 0
+      CenterZ: 0
+      MaxY: 120
+      MinY: 32
+  - world_the_end:
+      enable: false
+      UseWorldBorder: false
+      MaxRadius: 1000
+      MinRadius: 50
+      CenterX: 0
+      CenterZ: 0
 
 ## Override a world and rtp a player executing the command in one world, to another
 Overrides:
-  #FORMAT - <CURRENT WORLD>:<DESIRED WORLD>
-  - master_world: 'world'
-  - creative_world: 'world'
+  ## true = the overrides in the list below are used, false = this option is ignored
+  enable: false
+  list:
+    #FORMAT - <CURRENT WORLD>:<DESIRED WORLD>
+    #- master_world: 'world'
+    #- creative_world: 'world'
 
 WorldType: # Available types are NORMAL, NETHER
   - world: NORMAL
@@ -173,3 +216,35 @@ PermissionGroup: #Player requires "betterrtp.group.<group_name>" to trigger thes
             MinRadius: 10000
             Price: 15
             Cooldown: 1500
+
+# Pre-generates RTP positions and their surrounding chunks for faster teleports.
+# Configure each world using its exact world name (names containing a '.' are not supported here).
+# Prepared positions are saved in plugins/BetterRTP/preload-positions.yml and survive restarts.
+# A prepared position is only handed out when it fits the radius/shape of the player's RTP settings,
+# otherwise the normal RTP (and the Queue above) is used. Positions are re-checked when they are used.
+# Generation runs in the background, one position at a time, so it will not freeze the server.
+# Worlds listed in DisabledWorlds are skipped.
+PreloadChunkPosition:
+  world:
+    # Enable or disable pre-generated RTP positions for this world.
+    enable: true
+
+    # Number of RTP positions to maintain for this world. (1 - 500)
+    positions: 10
+
+    # Chunk radius to generate around each position. (0 - 16)
+    # A radius of 2 covers a 5x5 area, or up to 25 chunks per position.
+    # This generates chunks in advance; it does not automatically keep them loaded.
+    chunks-gen-radius: 2
+
+    # Keep the relevant chunks loaded after generation.
+    # false = allow normal chunk unloading.
+    # Needs Paper (plugin chunk tickets). Kept chunks are released again once their position was used.
+    keep-loaded: false
+
+    # Chunk loading type: active or lazy.
+    # active = keep the chunks loaded with a Paper plugin chunk ticket.
+    # lazy = accepted, but the Paper API only offers one kind of plugin chunk ticket, so on
+    #        current Paper versions it behaves exactly like active.
+    # Only used when keep-loaded is true.
+    keep-loaded-chunk-type: active

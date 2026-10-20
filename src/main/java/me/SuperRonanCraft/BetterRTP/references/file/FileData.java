@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -80,6 +81,13 @@ public interface FileData {
         getConfig().set(path, value);
     }
 
+    /**
+     * Called after the file was read and before the bundled defaults are attached to it, so only what really is in the
+     * file can be seen. Files override this to bring older layouts up to date.
+     */
+    default void beforeDefaults(YamlConfiguration loaded, YamlConfiguration bundled) {
+    }
+
     //PROCCESSING
     default void load() {
         YamlConfiguration config = getConfig();
@@ -97,9 +105,11 @@ public interface FileData {
                 config.load(file);
                 final InputStream in = plugin().getResource(fileName().replace(File.separator, "/"));
                 if (in != null && in.available() > 0) {
-                    config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(in)));
-                    config.options().copyDefaults(true);
+                    YamlConfiguration bundled = YamlConfiguration.loadConfiguration(new InputStreamReader(in, StandardCharsets.UTF_8));
                     in.close();
+                    beforeDefaults(config, bundled); //Update an old file BEFORE the defaults hide what is (not) in it
+                    config.setDefaults(bundled);
+                    config.options().copyDefaults(true);
                 } else {
                     System.out.println("Input file was nulled " + fileName());
                 }

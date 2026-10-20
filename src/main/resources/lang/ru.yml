@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Translated to Russian by Logan (https://t.me/icemine_ru)
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток и &7$%price%.'
-    Bypass: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
-    Loading: '&aБезопасное место найдено. &7Прогрузка чанков...'
-    Teleport: '&aТелепортация... &7Пожалуйста, подождите, пока будет найдено безопасное место.'
+    Paid:
+      chat:
+        enable: true
+        text: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток и &7$%price%.'
+      actionbar:
+        enable: false
+        text: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток и &7$%price%.'
+      title:
+        enable: false
+        text: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток и &7$%price%.'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
+      actionbar:
+        enable: false
+        text: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
+      title:
+        enable: false
+        text: '&aВы были телепортированы по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aБезопасное место найдено. &7Прогрузка чанков...'
+      actionbar:
+        enable: false
+        text: '&aБезопасное место найдено. &7Прогрузка чанков...'
+      title:
+        enable: false
+        text: '&aБезопасное место найдено. &7Прогрузка чанков...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aТелепортация... &7Пожалуйста, подождите, пока будет найдено безопасное место.'
+      actionbar:
+        enable: false
+        text: '&aТелепортация... &7Пожалуйста, подождите, пока будет найдено безопасное место.'
+      title:
+        enable: false
+        text: '&aТелепортация... &7Пожалуйста, подождите, пока будет найдено безопасное место.'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cНевозможно использовать RTP в связи с нехваткой средств! &7Вы должны иметь, как минимум, $%price% на счёте.'
-    NotSafe: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! Вы не были телепортированы.'
-    Hunger: '&cНевозможно телепортировать – вы слишком &7голодны!&c Поешьте прежде.'
+    Price:
+      chat:
+        enable: true
+        text: '&cНевозможно использовать RTP в связи с нехваткой средств! &7Вы должны иметь, как минимум, $%price% на счёте.'
+      actionbar:
+        enable: false
+        text: '&cНевозможно использовать RTP в связи с нехваткой средств! &7Вы должны иметь, как минимум, $%price% на счёте.'
+      title:
+        enable: false
+        text: '&cНевозможно использовать RTP в связи с нехваткой средств! &7Вы должны иметь, как минимум, $%price% на счёте.'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! Вы не были телепортированы.'
+      actionbar:
+        enable: false
+        text: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! Вы не были телепортированы.'
+      title:
+        enable: false
+        text: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! Вы не были телепортированы.'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cНевозможно телепортировать – вы слишком &7голодны!&c Поешьте прежде.'
+      actionbar:
+        enable: false
+        text: '&cНевозможно телепортировать – вы слишком &7голодны!&c Поешьте прежде.'
+      title:
+        enable: false
+        text: '&cНевозможно телепортировать – вы слишком &7голодны!&c Поешьте прежде.'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&7%player%&c был телепортирован по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
-    NotSafe: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! &7%player%&c не был телепортированы.'
-    Biome: '&cПохоже, биом &7%biome%&c не существует. Попробуйте использовать TAB-лист.'
-  Reload: '&eКонфиг успешно перезагружен!'
+    Success:
+      chat:
+        enable: true
+        text: '&7%player%&c был телепортирован по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
+      actionbar:
+        enable: false
+        text: '&7%player%&c был телепортирован по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
+      title:
+        enable: false
+        text: '&7%player%&c был телепортирован по координатам &7X: %x%, Y: %y%, Z: %z%&a за &7%attempts%&a попыток.'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! &7%player%&c не был телепортированы.'
+      actionbar:
+        enable: false
+        text: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! &7%player%&c не был телепортированы.'
+      title:
+        enable: false
+        text: '&cБезопасное место не было найдено в течение &7%attempts%&c попыток! &7%player%&c не был телепортированы.'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cПохоже, биом &7%biome%&c не существует. Попробуйте использовать TAB-лист.'
+      actionbar:
+        enable: false
+        text: '&cПохоже, биом &7%biome%&c не существует. Попробуйте использовать TAB-лист.'
+      title:
+        enable: false
+        text: '&cПохоже, биом &7%biome%&c не существует. Попробуйте использовать TAB-лист.'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eКонфиг успешно перезагружен!'
+    actionbar:
+      enable: false
+      text: '&eКонфиг успешно перезагружен!'
+    title:
+      enable: false
+      text: '&eКонфиг успешно перезагружен!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cИзвините! Недостаточно полномочий для выполнения команды. &8Permission: %permission%'
-    World: '&cК сожалению, Вам не разрешено использовать рандомную телепортацию в мире &7%world%. &8Permission: %permission%'
-  DisabledWorld: '&cНевозможно использовать рандомную телепортацию - мир &7%world%&c отключен!'
-  Cooldown: '&cК сожалению, рандомная телепортация будет недоступна еще &7%time%&c.'
-  Locked: '&cК сожалению, Вы истратили все свои рандомные телепортации.'
-  Invalid: '&cНеверный аргумент. Используйте: ''/%command% help'''
-  NotOnline: '&cИгрок &7%player% &cне в игре.'
-  Delay: '&aТелепортация через &7%time% &aсекунд! Не двигайтесь!'
-  Moved: '&cВы двинулись! &7Рандомная телепортация отменена!'
-  NotExist: '&cПохоже, мир &7%world%&c не существует.'
-  Already: '&cВы уже ожидаете рандомную телепортацию. Проявите терпение.'
-  Sign: '&aКомандная табличка создана. Команда: &7''&7/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cИзвините! Недостаточно полномочий для выполнения команды. &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cИзвините! Недостаточно полномочий для выполнения команды. &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cИзвините! Недостаточно полномочий для выполнения команды. &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cК сожалению, Вам не разрешено использовать рандомную телепортацию в мире &7%world%. &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cК сожалению, Вам не разрешено использовать рандомную телепортацию в мире &7%world%. &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cК сожалению, Вам не разрешено использовать рандомную телепортацию в мире &7%world%. &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cНевозможно использовать рандомную телепортацию - мир &7%world%&c отключен!'
+    actionbar:
+      enable: false
+      text: '&cНевозможно использовать рандомную телепортацию - мир &7%world%&c отключен!'
+    title:
+      enable: false
+      text: '&cНевозможно использовать рандомную телепортацию - мир &7%world%&c отключен!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cК сожалению, рандомная телепортация будет недоступна еще &7%time%&c.'
+    actionbar:
+      enable: false
+      text: '&cК сожалению, рандомная телепортация будет недоступна еще &7%time%&c.'
+    title:
+      enable: false
+      text: '&cК сожалению, рандомная телепортация будет недоступна еще &7%time%&c.'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cК сожалению, Вы истратили все свои рандомные телепортации.'
+    actionbar:
+      enable: false
+      text: '&cК сожалению, Вы истратили все свои рандомные телепортации.'
+    title:
+      enable: false
+      text: '&cК сожалению, Вы истратили все свои рандомные телепортации.'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cНеверный аргумент. Используйте: ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cНеверный аргумент. Используйте: ''/%command% help'''
+    title:
+      enable: false
+      text: '&cНеверный аргумент. Используйте: ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cИгрок &7%player% &cне в игре.'
+    actionbar:
+      enable: false
+      text: '&cИгрок &7%player% &cне в игре.'
+    title:
+      enable: false
+      text: '&cИгрок &7%player% &cне в игре.'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aТелепортация через &7%time% &aсекунд! Не двигайтесь!'
+    actionbar:
+      enable: false
+      text: '&aТелепортация через &7%time% &aсекунд! Не двигайтесь!'
+    title:
+      enable: false
+      text: '&aТелепортация через &7%time% &aсекунд! Не двигайтесь!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cВы двинулись! &7Рандомная телепортация отменена!'
+    actionbar:
+      enable: false
+      text: '&cВы двинулись! &7Рандомная телепортация отменена!'
+    title:
+      enable: false
+      text: '&cВы двинулись! &7Рандомная телепортация отменена!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cПохоже, мир &7%world%&c не существует.'
+    actionbar:
+      enable: false
+      text: '&cПохоже, мир &7%world%&c не существует.'
+    title:
+      enable: false
+      text: '&cПохоже, мир &7%world%&c не существует.'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cВы уже ожидаете рандомную телепортацию. Проявите терпение.'
+    actionbar:
+      enable: false
+      text: '&cВы уже ожидаете рандомную телепортацию. Проявите терпение.'
+    title:
+      enable: false
+      text: '&cВы уже ожидаете рандомную телепортацию. Проявите терпение.'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&aКомандная табличка создана. Команда: &7''&7/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&aКомандная табличка создана. Команда: &7''&7/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&aКомандная табличка создана. Команда: &7''&7/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cОшибка! &7Введены неверные значения.'
-    Set: '&bУспех! &7%type% установлен на %value%'
-    Remove: '&cУдалено! &7Вы удалили нестандартный мир %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cОшибка! &7Введены неверные значения.'
+      actionbar:
+        enable: false
+        text: '&cОшибка! &7Введены неверные значения.'
+      title:
+        enable: false
+        text: '&cОшибка! &7Введены неверные значения.'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bУспех! &7%type% установлен на %value%'
+      actionbar:
+        enable: false
+        text: '&bУспех! &7%type% установлен на %value%'
+      title:
+        enable: false
+        text: '&bУспех! &7%type% установлен на %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cУдалено! &7Вы удалили нестандартный мир %world%'
+      actionbar:
+        enable: false
+        text: '&cУдалено! &7Вы удалили нестандартный мир %world%'
+      title:
+        enable: false
+        text: '&cУдалено! &7Вы удалили нестандартный мир %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Помощь &e&m-----'

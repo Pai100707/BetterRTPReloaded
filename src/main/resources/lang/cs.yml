@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Translation author: Lewisparkle (Discord)
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% za &c$%price%&7!'
-    Bypass: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% po &f%attempts% &7pokusech!'
-    Loading: '&aNalezeno bezpečné místo! &7Načítám chunky...'
-    Teleport: '&aTeleportuji... &fProsím, počkejte, než nalezneme bezpečné místo!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% za &c$%price%&7!'
+      actionbar:
+        enable: false
+        text: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% za &c$%price%&7!'
+      title:
+        enable: false
+        text: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% za &c$%price%&7!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% po &f%attempts% &7pokusech!'
+      actionbar:
+        enable: false
+        text: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% po &f%attempts% &7pokusech!'
+      title:
+        enable: false
+        text: '&aByl/a jsi teleportován/a na&7 x=%x% y=%y% z=%z% po &f%attempts% &7pokusech!'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aNalezeno bezpečné místo! &7Načítám chunky...'
+      actionbar:
+        enable: false
+        text: '&aNalezeno bezpečné místo! &7Načítám chunky...'
+      title:
+        enable: false
+        text: '&aNalezeno bezpečné místo! &7Načítám chunky...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTeleportuji... &fProsím, počkejte, než nalezneme bezpečné místo!'
+      actionbar:
+        enable: false
+        text: '&aTeleportuji... &fProsím, počkejte, než nalezneme bezpečné místo!'
+      title:
+        enable: false
+        text: '&aTeleportuji... &fProsím, počkejte, než nalezneme bezpečné místo!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cNebyl/a jsi teleportován, protože nemáš dostatek peněz! &7Musíš mít alespoň $%price% &7pro teleport!'
-    NotSafe: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7Nebyl/a jsi teleportován/a!'
-    Hunger: '&cNebyl/a jsi teleportován, protože jsi... &7příliš hladový/á.&c Sněz něco, kámo!'
+    Price:
+      chat:
+        enable: true
+        text: '&cNebyl/a jsi teleportován, protože nemáš dostatek peněz! &7Musíš mít alespoň $%price% &7pro teleport!'
+      actionbar:
+        enable: false
+        text: '&cNebyl/a jsi teleportován, protože nemáš dostatek peněz! &7Musíš mít alespoň $%price% &7pro teleport!'
+      title:
+        enable: false
+        text: '&cNebyl/a jsi teleportován, protože nemáš dostatek peněz! &7Musíš mít alespoň $%price% &7pro teleport!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7Nebyl/a jsi teleportován/a!'
+      actionbar:
+        enable: false
+        text: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7Nebyl/a jsi teleportován/a!'
+      title:
+        enable: false
+        text: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7Nebyl/a jsi teleportován/a!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cNebyl/a jsi teleportován, protože jsi... &7příliš hladový/á.&c Sněz něco, kámo!'
+      actionbar:
+        enable: false
+        text: '&cNebyl/a jsi teleportován, protože jsi... &7příliš hladový/á.&c Sněz něco, kámo!'
+      title:
+        enable: false
+        text: '&cNebyl/a jsi teleportován, protože jsi... &7příliš hladový/á.&c Sněz něco, kámo!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% byl/a teleportován/a na&7 x=%x% y=%y% z=%z%!'
-    NotSafe: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7%player% nebyl/a teleportován/a!'
-    Biome: '&cVypadá to, že biom&7 %biome%&c neexistuje! &7Zkus použít tabulátor!'
-  Reload: '&eConfig úspěšně načten!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% byl/a teleportován/a na&7 x=%x% y=%y% z=%z%!'
+      actionbar:
+        enable: false
+        text: '&a%player% byl/a teleportován/a na&7 x=%x% y=%y% z=%z%!'
+      title:
+        enable: false
+        text: '&a%player% byl/a teleportován/a na&7 x=%x% y=%y% z=%z%!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7%player% nebyl/a teleportován/a!'
+      actionbar:
+        enable: false
+        text: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7%player% nebyl/a teleportován/a!'
+      title:
+        enable: false
+        text: '&cNepodařilo se najít bezpečné místo po %attempts% pokusech! &7%player% nebyl/a teleportován/a!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cVypadá to, že biom&7 %biome%&c neexistuje! &7Zkus použít tabulátor!'
+      actionbar:
+        enable: false
+        text: '&cVypadá to, že biom&7 %biome%&c neexistuje! &7Zkus použít tabulátor!'
+      title:
+        enable: false
+        text: '&cVypadá to, že biom&7 %biome%&c neexistuje! &7Zkus použít tabulátor!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eConfig úspěšně načten!'
+    actionbar:
+      enable: false
+      text: '&eConfig úspěšně načten!'
+    title:
+      enable: false
+      text: '&eConfig úspěšně načten!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cPozor! &7Na tento příkaz nemáš práva! &8Permission: %permission%'
-    World: '&cPozor! &7Ve světě %world% se nelze teleportovat! &8Permission: %permission%'
-  DisabledWorld: '&cSvět %world% je uzamčen! &7Teleport nebyl možný!'
-  Cooldown: '&cPozor! &7Nemůžeš se teleportovat ještě &c%time%&7!'
-  Locked: '&cPozor! &7Využil/a jsi všechny své teleporty!'
-  Invalid: '&cNeplatný příkaz. Zkus ''/%command% help''.'
-  NotOnline: '&cHráč &7%player% &cnení online!'
-  Delay: '&aTeleportuji za &f%time% &asekund! Nehýbej se!'
-  Moved: '&cPohl/a jsi se! &7Teleport byl zrušen!'
-  NotExist: '&cVypadá to, že svět &7%world% &cneexistuje!'
-  Already: '&cUps! &7Vypadá to, že se už teleportuješ! Měj trochu strpení!'
-  Sign: '&7Cedulka s příkazem vytvořena! &7Příkaz je... ''&f/rtp %command%&7''.'
+    Basic:
+      chat:
+        enable: true
+        text: '&cPozor! &7Na tento příkaz nemáš práva! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cPozor! &7Na tento příkaz nemáš práva! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cPozor! &7Na tento příkaz nemáš práva! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cPozor! &7Ve světě %world% se nelze teleportovat! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cPozor! &7Ve světě %world% se nelze teleportovat! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cPozor! &7Ve světě %world% se nelze teleportovat! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cSvět %world% je uzamčen! &7Teleport nebyl možný!'
+    actionbar:
+      enable: false
+      text: '&cSvět %world% je uzamčen! &7Teleport nebyl možný!'
+    title:
+      enable: false
+      text: '&cSvět %world% je uzamčen! &7Teleport nebyl možný!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cPozor! &7Nemůžeš se teleportovat ještě &c%time%&7!'
+    actionbar:
+      enable: false
+      text: '&cPozor! &7Nemůžeš se teleportovat ještě &c%time%&7!'
+    title:
+      enable: false
+      text: '&cPozor! &7Nemůžeš se teleportovat ještě &c%time%&7!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cPozor! &7Využil/a jsi všechny své teleporty!'
+    actionbar:
+      enable: false
+      text: '&cPozor! &7Využil/a jsi všechny své teleporty!'
+    title:
+      enable: false
+      text: '&cPozor! &7Využil/a jsi všechny své teleporty!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cNeplatný příkaz. Zkus ''/%command% help''.'
+    actionbar:
+      enable: false
+      text: '&cNeplatný příkaz. Zkus ''/%command% help''.'
+    title:
+      enable: false
+      text: '&cNeplatný příkaz. Zkus ''/%command% help''.'
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cHráč &7%player% &cnení online!'
+    actionbar:
+      enable: false
+      text: '&cHráč &7%player% &cnení online!'
+    title:
+      enable: false
+      text: '&cHráč &7%player% &cnení online!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeleportuji za &f%time% &asekund! Nehýbej se!'
+    actionbar:
+      enable: false
+      text: '&aTeleportuji za &f%time% &asekund! Nehýbej se!'
+    title:
+      enable: false
+      text: '&aTeleportuji za &f%time% &asekund! Nehýbej se!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cPohl/a jsi se! &7Teleport byl zrušen!'
+    actionbar:
+      enable: false
+      text: '&cPohl/a jsi se! &7Teleport byl zrušen!'
+    title:
+      enable: false
+      text: '&cPohl/a jsi se! &7Teleport byl zrušen!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cVypadá to, že svět &7%world% &cneexistuje!'
+    actionbar:
+      enable: false
+      text: '&cVypadá to, že svět &7%world% &cneexistuje!'
+    title:
+      enable: false
+      text: '&cVypadá to, že svět &7%world% &cneexistuje!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cUps! &7Vypadá to, že se už teleportuješ! Měj trochu strpení!'
+    actionbar:
+      enable: false
+      text: '&cUps! &7Vypadá to, že se už teleportuješ! Měj trochu strpení!'
+    title:
+      enable: false
+      text: '&cUps! &7Vypadá to, že se už teleportuješ! Měj trochu strpení!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Cedulka s příkazem vytvořena! &7Příkaz je... ''&f/rtp %command%&7''.'
+    actionbar:
+      enable: false
+      text: '&7Cedulka s příkazem vytvořena! &7Příkaz je... ''&f/rtp %command%&7''.'
+    title:
+      enable: false
+      text: '&7Cedulka s příkazem vytvořena! &7Příkaz je... ''&f/rtp %command%&7''.'
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cError! &7Zadána neplatná hodnota!'
-    Set: '&bÚspěch! &7%type% nastaveno na %value%'
-    Remove: '&cOdstraněno! &7Vymazal jsi vlastní svět %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cError! &7Zadána neplatná hodnota!'
+      actionbar:
+        enable: false
+        text: '&cError! &7Zadána neplatná hodnota!'
+      title:
+        enable: false
+        text: '&cError! &7Zadána neplatná hodnota!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bÚspěch! &7%type% nastaveno na %value%'
+      actionbar:
+        enable: false
+        text: '&bÚspěch! &7%type% nastaveno na %value%'
+      title:
+        enable: false
+        text: '&bÚspěch! &7%type% nastaveno na %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cOdstraněno! &7Vymazal jsi vlastní svět %world%'
+      actionbar:
+        enable: false
+        text: '&cOdstraněno! &7Vymazal jsi vlastní svět %world%'
+      title:
+        enable: false
+        text: '&cOdstraněno! &7Vymazal jsi vlastní svět %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Pomoc &e&m-----'

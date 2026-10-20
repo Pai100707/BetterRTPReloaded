@@ -3,6 +3,7 @@ package me.SuperRonanCraft.BetterRTP.references.helpers;
 import me.SuperRonanCraft.BetterRTP.BetterRTP;
 import me.SuperRonanCraft.BetterRTP.player.commands.types.CmdEdit;
 import me.SuperRonanCraft.BetterRTP.references.file.FileOther;
+import me.SuperRonanCraft.BetterRTP.references.file.config.ConfigLists;
 import me.SuperRonanCraft.BetterRTP.references.messages.Message_RTP;
 import me.SuperRonanCraft.BetterRTP.references.messages.MessagesCore;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.worlds.WORLD_TYPE;
@@ -53,10 +54,7 @@ public class HelperRTP_EditWorlds {
                 for (Object map2 : m.values()) {
                     Map<Object, Object> values = (Map<Object, Object>) map2;
                     values.put(cmd.get(), value);
-                    Message_RTP.sms(sendi,
-                            MessagesCore.EDIT_SET.get(sendi, null)
-                                    .replace("%type%", cmd.get())
-                                    .replace("%value%", val));
+                    sendEditSet(sendi, cmd.get(), val);
                 }
                 break;
             }
@@ -114,10 +112,7 @@ public class HelperRTP_EditWorlds {
                             if (world.equals(worldFields.getKey().toString())) {
                                 Map<Object, Object> values = (Map<Object, Object>) worldFields.getValue();
                                 values.put(cmd.get(), value);
-                                Message_RTP.sms(sendi,
-                                        MessagesCore.EDIT_SET.get(sendi, null)
-                                                .replace("%type%", cmd.get())
-                                                .replace("%value%", val));
+                                sendEditSet(sendi, cmd.get(), val);
                             }
                         }
                     }
@@ -166,10 +161,7 @@ public class HelperRTP_EditWorlds {
         try {
             config.save(file.getFile());
             BetterRTP.getInstance().getRTP().loadWorlds();
-            Message_RTP.sms(sendi,
-                    MessagesCore.EDIT_SET.get(sendi, null)
-                            .replace("%type%", cmd.get())
-                            .replace("%value%", val));
+            sendEditSet(sendi, cmd.get(), val);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -207,10 +199,7 @@ public class HelperRTP_EditWorlds {
         try {
             config.save(file.getFile());
             BetterRTP.getInstance().getRTP().load();
-            Message_RTP.sms(sendi,
-                    MessagesCore.EDIT_SET.get(sendi, null)
-                            .replace("%type%", CmdEdit.RTP_CMD_EDIT.WORLD_TYPE.name())
-                            .replace("%value%", val));
+            sendEditSet(sendi, CmdEdit.RTP_CMD_EDIT.WORLD_TYPE.name(), val);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -221,7 +210,8 @@ public class HelperRTP_EditWorlds {
         FileOther.FILETYPE file = FileOther.FILETYPE.CONFIG;
         YamlConfiguration config = file.getConfig();
 
-        List<Map<?, ?>> world_map = config.getMapList("Overrides");
+        List<Map<?, ?>> world_map = new ArrayList<>(ConfigLists.maps(ConfigLists.read(config, "Overrides")));
+        boolean overridesEnabled = ConfigLists.read(config, "Overrides").enabled;
         List<Map<?, ?>> removeList = new ArrayList<>();
         for (Map<?, ?> m : world_map) {
             for (Map.Entry<?, ?> entry : m.entrySet()) {
@@ -235,18 +225,16 @@ public class HelperRTP_EditWorlds {
             Map<String, String> newIndex = new HashMap<>();
             newIndex.put(world, val);
             world_map.add(newIndex);
+            overridesEnabled = true; //Adding an override means it should be used
         } else {
             val = "(removed override)";
         }
-        config.set("Overrides", world_map);
+        ConfigLists.write(config, "Overrides", overridesEnabled, world_map);
 
         try {
             config.save(file.getFile());
             BetterRTP.getInstance().getRTP().load();
-            Message_RTP.sms(sendi,
-                    MessagesCore.EDIT_SET.get(sendi, null)
-                            .replace("%type%", CmdEdit.RTP_CMD_EDIT.OVERRIDE.name())
-                            .replace("%value%", val));
+            sendEditSet(sendi, CmdEdit.RTP_CMD_EDIT.OVERRIDE.name(), val);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -276,13 +264,18 @@ public class HelperRTP_EditWorlds {
         try {
             config.save(file.getFile());
             BetterRTP.getInstance().getRTP().load();
-            Message_RTP.sms(sendi,
-                    MessagesCore.EDIT_SET.get(sendi, null)
-                            .replace("%type%", CmdEdit.RTP_CMD_EDIT.BLACKLISTEDBLOCKS.name())
-                            .replace("%value%", block));
+            sendEditSet(sendi, CmdEdit.RTP_CMD_EDIT.BLACKLISTEDBLOCKS.name(), block);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+
+    /** Sends Messages.Edit.Set with every enabled delivery type (chat/actionbar/title). */
+    private static void sendEditSet(CommandSender sendi, String type, String value) {
+        Map<String, String> replacements = new HashMap<>();
+        replacements.put("%type%", type);
+        replacements.put("%value%", value);
+        MessagesCore.EDIT_SET.send(sendi, replacements);
+    }
 }

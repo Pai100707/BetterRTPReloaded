@@ -1,38 +1,363 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Ajude a traduzir este arquivo para mais idiomas!
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success: ## Marcadores! %x% %y% e %z% são as coordenadas x, y, e z para as quais o jogador está sendo teleportado! #
-    Paid: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z% por &c$%price%&7!'
-    Bypass: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z%'
-    Loading: '&aLocal seguro localizado! &7Carregando chunks...'
-    Teleport: '&aTeleportando... &fpor favor, aguarde enquanto encontramos um local seguro!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z% por &c$%price%&7!'
+      actionbar:
+        enable: false
+        text: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z% por &c$%price%&7!'
+      title:
+        enable: false
+        text: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z% por &c$%price%&7!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&aVocê foi teleportado para&7 x=%x% y=%y% z=%z%'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aLocal seguro localizado! &7Carregando chunks...'
+      actionbar:
+        enable: false
+        text: '&aLocal seguro localizado! &7Carregando chunks...'
+      title:
+        enable: false
+        text: '&aLocal seguro localizado! &7Carregando chunks...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTeleportando... &fpor favor, aguarde enquanto encontramos um local seguro!'
+      actionbar:
+        enable: false
+        text: '&aTeleportando... &fpor favor, aguarde enquanto encontramos um local seguro!'
+      title:
+        enable: false
+        text: '&aTeleportando... &fpor favor, aguarde enquanto encontramos um local seguro!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cNão foi possível teletransportar porque não há fundos suficientes! &7Você precisa de pelo menos $%price% &7para rtp!'
-    NotSafe: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7Você não foi teleportado!'
-    Hunger: '&cNão foi possível teletransportar porque você está... &7com fome demais&c, coma algo!'
+    Price:
+      chat:
+        enable: true
+        text: '&cNão foi possível teletransportar porque não há fundos suficientes! &7Você precisa de pelo menos $%price% &7para rtp!'
+      actionbar:
+        enable: false
+        text: '&cNão foi possível teletransportar porque não há fundos suficientes! &7Você precisa de pelo menos $%price% &7para rtp!'
+      title:
+        enable: false
+        text: '&cNão foi possível teletransportar porque não há fundos suficientes! &7Você precisa de pelo menos $%price% &7para rtp!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7Você não foi teleportado!'
+      actionbar:
+        enable: false
+        text: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7Você não foi teleportado!'
+      title:
+        enable: false
+        text: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7Você não foi teleportado!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cNão foi possível teletransportar porque você está... &7com fome demais&c, coma algo!'
+      actionbar:
+        enable: false
+        text: '&cNão foi possível teletransportar porque você está... &7com fome demais&c, coma algo!'
+      title:
+        enable: false
+        text: '&cNão foi possível teletransportar porque você está... &7com fome demais&c, coma algo!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% foi teleportado para&7 x=%x% y=%y% z=%z%'
-    NotSafe: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7%player% não foi teleportado!'
-    Biome: '&cParece que o bioma&7 %biome%&c não existe! &7Tente usar a lista de abas!'
-  Reload: '&eConfiguração recarregada com sucesso!'
-  Update: '&7Há uma atualização disponível para &6BetterRTP &7versão &e#%newVersion% &7você tem a versão &e#%currentVersion%'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% foi teleportado para&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&a%player% foi teleportado para&7 x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&a%player% foi teleportado para&7 x=%x% y=%y% z=%z%'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7%player% não foi teleportado!'
+      actionbar:
+        enable: false
+        text: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7%player% não foi teleportado!'
+      title:
+        enable: false
+        text: '&cNão foi possível encontrar um local seguro em %attempts% tentativas! &7%player% não foi teleportado!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cParece que o bioma&7 %biome%&c não existe! &7Tente usar a lista de abas!'
+      actionbar:
+        enable: false
+        text: '&cParece que o bioma&7 %biome%&c não existe! &7Tente usar a lista de abas!'
+      title:
+        enable: false
+        text: '&cParece que o bioma&7 %biome%&c não existe! &7Tente usar a lista de abas!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eConfiguração recarregada com sucesso!'
+    actionbar:
+      enable: false
+      text: '&eConfiguração recarregada com sucesso!'
+    title:
+      enable: false
+      text: '&eConfiguração recarregada com sucesso!'
+      subtitle:
+        enable: false
+        text: ''
+  Update:
+    chat:
+      enable: true
+      text: '&7Há uma atualização disponível para &6BetterRTP &7versão &e#%newVersion% &7você tem a versão &e#%currentVersion%'
+    actionbar:
+      enable: false
+      text: '&7Há uma atualização disponível para &6BetterRTP &7versão &e#%newVersion% &7você tem a versão &e#%currentVersion%'
+    title:
+      enable: false
+      text: '&7Há uma atualização disponível para &6BetterRTP &7versão &e#%newVersion% &7você tem a versão &e#%currentVersion%'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cDesculpe! &7Você não tem permissão para usar este comando! &8Permissão: %permission%'
-    World: '&cDesculpe! &7Você não tem permissão para rtp no mundo %world%! &8Permissão: %permission%'
-  DisabledWorld: '&cMundo desativado %world%! &7Não foi possível teleportar!'
-  Cooldown: '&cDesculpe! &7Você não pode usar rtp por mais &c%time%&7!'
-  Locked: '&cDesculpe! &7Você já usou todos os seus RTPs!'
-  Invalid: '&cArgumento inválido. Tente ''/%command% help'''
-  NotOnline: '&cO jogador &7%player% &cnão está online!'
-  Delay: '&aTeleportando em &f%time% &asegundos! Não se mova!'
-  Moved: '&cVocê se moveu! &7O RTP foi cancelado!'
-  NotExist: '&cParece que o mundo &7%world% &cnão existe!'
-  Already: '&cOps! &7Parece que você já está usando rtp, tenha um pouco de paciência!'
-  Sign: '&7Sinal de comando criado! &7O comando é... ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cDesculpe! &7Você não tem permissão para usar este comando! &8Permissão: %permission%'
+      actionbar:
+        enable: false
+        text: '&cDesculpe! &7Você não tem permissão para usar este comando! &8Permissão: %permission%'
+      title:
+        enable: false
+        text: '&cDesculpe! &7Você não tem permissão para usar este comando! &8Permissão: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cDesculpe! &7Você não tem permissão para rtp no mundo %world%! &8Permissão: %permission%'
+      actionbar:
+        enable: false
+        text: '&cDesculpe! &7Você não tem permissão para rtp no mundo %world%! &8Permissão: %permission%'
+      title:
+        enable: false
+        text: '&cDesculpe! &7Você não tem permissão para rtp no mundo %world%! &8Permissão: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cMundo desativado %world%! &7Não foi possível teleportar!'
+    actionbar:
+      enable: false
+      text: '&cMundo desativado %world%! &7Não foi possível teleportar!'
+    title:
+      enable: false
+      text: '&cMundo desativado %world%! &7Não foi possível teleportar!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cDesculpe! &7Você não pode usar rtp por mais &c%time%&7!'
+    actionbar:
+      enable: false
+      text: '&cDesculpe! &7Você não pode usar rtp por mais &c%time%&7!'
+    title:
+      enable: false
+      text: '&cDesculpe! &7Você não pode usar rtp por mais &c%time%&7!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cDesculpe! &7Você já usou todos os seus RTPs!'
+    actionbar:
+      enable: false
+      text: '&cDesculpe! &7Você já usou todos os seus RTPs!'
+    title:
+      enable: false
+      text: '&cDesculpe! &7Você já usou todos os seus RTPs!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cArgumento inválido. Tente ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cArgumento inválido. Tente ''/%command% help'''
+    title:
+      enable: false
+      text: '&cArgumento inválido. Tente ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cO jogador &7%player% &cnão está online!'
+    actionbar:
+      enable: false
+      text: '&cO jogador &7%player% &cnão está online!'
+    title:
+      enable: false
+      text: '&cO jogador &7%player% &cnão está online!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeleportando em &f%time% &asegundos! Não se mova!'
+    actionbar:
+      enable: false
+      text: '&aTeleportando em &f%time% &asegundos! Não se mova!'
+    title:
+      enable: false
+      text: '&aTeleportando em &f%time% &asegundos! Não se mova!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cVocê se moveu! &7O RTP foi cancelado!'
+    actionbar:
+      enable: false
+      text: '&cVocê se moveu! &7O RTP foi cancelado!'
+    title:
+      enable: false
+      text: '&cVocê se moveu! &7O RTP foi cancelado!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cParece que o mundo &7%world% &cnão existe!'
+    actionbar:
+      enable: false
+      text: '&cParece que o mundo &7%world% &cnão existe!'
+    title:
+      enable: false
+      text: '&cParece que o mundo &7%world% &cnão existe!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cOps! &7Parece que você já está usando rtp, tenha um pouco de paciência!'
+    actionbar:
+      enable: false
+      text: '&cOps! &7Parece que você já está usando rtp, tenha um pouco de paciência!'
+    title:
+      enable: false
+      text: '&cOps! &7Parece que você já está usando rtp, tenha um pouco de paciência!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Sinal de comando criado! &7O comando é... ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Sinal de comando criado! &7O comando é... ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7Sinal de comando criado! &7O comando é... ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cErro! &7Entrada inválida fornecida!'
-    Set: '&bSucesso! &7%type% definido para %value%'
-    Remove: '&cRemovido! &7Você removeu o Mundo Personalizado %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cErro! &7Entrada inválida fornecida!'
+      actionbar:
+        enable: false
+        text: '&cErro! &7Entrada inválida fornecida!'
+      title:
+        enable: false
+        text: '&cErro! &7Entrada inválida fornecida!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bSucesso! &7%type% definido para %value%'
+      actionbar:
+        enable: false
+        text: '&bSucesso! &7%type% definido para %value%'
+      title:
+        enable: false
+        text: '&bSucesso! &7%type% definido para %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cRemovido! &7Você removeu o Mundo Personalizado %world%'
+      actionbar:
+        enable: false
+        text: '&cRemovido! &7Você removeu o Mundo Personalizado %world%'
+      title:
+        enable: false
+        text: '&cRemovido! &7Você removeu o Mundo Personalizado %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Ajuda &e&m-----'

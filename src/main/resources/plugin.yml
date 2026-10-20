@@ -1,7 +1,7 @@
 main: me.SuperRonanCraft.BetterRTP.BetterRTP
 version: ${project.version}
-name: BetterRTP
-author: SuperRonanCraft
+name: BetterRTPReloaded
+author: SuperRonanCraft, Pai100707
 folia-supported: true #As of 3.6.8 thanks to LOOHP#6007, TechnicallyCoded#9095 and loving11ish#2066
 softdepend:
     - Vault
@@ -30,7 +30,7 @@ api-version: '1.13'
 
 commands:
     betterrtp:
-        aliases: [brtp, rtp, randomtp, wild, wildtp]
+        aliases: [rtp, brtp, brtpr, betterrtpreloaded]
         description: Randomly teleport to a location
 
 permissions:

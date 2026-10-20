@@ -1,37 +1,338 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Hjelp med å oversette denne filen til flere språk!
 Messages:
   Prefix: '&7 [&6BetterRTP &7]'
   Success: ## Plassholdere! %x% %y%og %z% er koordinatene x, y og z som spilleren blir teleportert til! #
-    Paid: '&aDu har blitt teleportert til &7 x=%x%, y=%y%, z=%z%, for &c $%price%&7 i &f%attempts%&7 forsøk!'
-    Bypass: '&Du har been teleportert to &7 x=%x% y=%y% z=%z% etter &f%attempts%&7 forsøk'
-    Loading: 'Trygt sted funnet! &7Laster biter ... '
-    Teleport: '&a Teleporter ... &7vent, mens vi finner et trygt sted!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aDu har blitt teleportert til &7 x=%x%, y=%y%, z=%z%, for &c $%price%&7 i &f%attempts%&7 forsøk!'
+      actionbar:
+        enable: false
+        text: '&aDu har blitt teleportert til &7 x=%x%, y=%y%, z=%z%, for &c $%price%&7 i &f%attempts%&7 forsøk!'
+      title:
+        enable: false
+        text: '&aDu har blitt teleportert til &7 x=%x%, y=%y%, z=%z%, for &c $%price%&7 i &f%attempts%&7 forsøk!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&Du har been teleportert to &7 x=%x% y=%y% z=%z% etter &f%attempts%&7 forsøk'
+      actionbar:
+        enable: false
+        text: '&Du har been teleportert to &7 x=%x% y=%y% z=%z% etter &f%attempts%&7 forsøk'
+      title:
+        enable: false
+        text: '&Du har been teleportert to &7 x=%x% y=%y% z=%z% etter &f%attempts%&7 forsøk'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: 'Trygt sted funnet! &7Laster biter ... '
+      actionbar:
+        enable: false
+        text: 'Trygt sted funnet! &7Laster biter ... '
+      title:
+        enable: false
+        text: 'Trygt sted funnet! &7Laster biter ... '
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&a Teleporter ... &7vent, mens vi finner et trygt sted!'
+      actionbar:
+        enable: false
+        text: '&a Teleporter ... &7vent, mens vi finner et trygt sted!'
+      title:
+        enable: false
+        text: '&a Teleporter ... &7vent, mens vi finner et trygt sted!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cKan ikke teleportere på grunn av manglende penger! &7Du må ha minst $%price% &7for rtp! '
-    NotSafe: '&cKan ikke finne et trygt sted innen%forsøk%forsøk! &7Du ble ikke teleportert! '
-    Hunger: '&cKan ikke rtp fordi du er ... &7for sulten &c, spis noe!'
+    Price:
+      chat:
+        enable: true
+        text: '&cKan ikke teleportere på grunn av manglende penger! &7Du må ha minst $%price% &7for rtp! '
+      actionbar:
+        enable: false
+        text: '&cKan ikke teleportere på grunn av manglende penger! &7Du må ha minst $%price% &7for rtp! '
+      title:
+        enable: false
+        text: '&cKan ikke teleportere på grunn av manglende penger! &7Du må ha minst $%price% &7for rtp! '
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cKan ikke finne et trygt sted innen%forsøk%forsøk! &7Du ble ikke teleportert! '
+      actionbar:
+        enable: false
+        text: '&cKan ikke finne et trygt sted innen%forsøk%forsøk! &7Du ble ikke teleportert! '
+      title:
+        enable: false
+        text: '&cKan ikke finne et trygt sted innen%forsøk%forsøk! &7Du ble ikke teleportert! '
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cKan ikke rtp fordi du er ... &7for sulten &c, spis noe!'
+      actionbar:
+        enable: false
+        text: '&cKan ikke rtp fordi du er ... &7for sulten &c, spis noe!'
+      title:
+        enable: false
+        text: '&cKan ikke rtp fordi du er ... &7for sulten &c, spis noe!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&en%player% er blitt teleportert til &7 x=%x% y=%y% z =%z% i &f%forsøk%&7 forsøk!'
-    NotSafe: '&cKan ikke finne et trygt sted innen %attempts% forsøk! &7%player% ble ikke teleportert! '
-    Biome: '&cSer ut som at %biome%&c ikke eksisterer! &7Prøv å bruke fanelisten! '
+    Success:
+      chat:
+        enable: true
+        text: '&en%player% er blitt teleportert til &7 x=%x% y=%y% z =%z% i &f%forsøk%&7 forsøk!'
+      actionbar:
+        enable: false
+        text: '&en%player% er blitt teleportert til &7 x=%x% y=%y% z =%z% i &f%forsøk%&7 forsøk!'
+      title:
+        enable: false
+        text: '&en%player% er blitt teleportert til &7 x=%x% y=%y% z =%z% i &f%forsøk%&7 forsøk!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cKan ikke finne et trygt sted innen %attempts% forsøk! &7%player% ble ikke teleportert! '
+      actionbar:
+        enable: false
+        text: '&cKan ikke finne et trygt sted innen %attempts% forsøk! &7%player% ble ikke teleportert! '
+      title:
+        enable: false
+        text: '&cKan ikke finne et trygt sted innen %attempts% forsøk! &7%player% ble ikke teleportert! '
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cSer ut som at %biome%&c ikke eksisterer! &7Prøv å bruke fanelisten! '
+      actionbar:
+        enable: false
+        text: '&cSer ut som at %biome%&c ikke eksisterer! &7Prøv å bruke fanelisten! '
+      title:
+        enable: false
+        text: '&cSer ut som at %biome%&c ikke eksisterer! &7Prøv å bruke fanelisten! '
+        subtitle:
+          enable: false
+          text: ''
     Reload: '&eKonfigurasjonsfil lastet inn på nytt!'
   NoPermission:
-    Basic: '&cBeklager! &7Du har ikke tillatelse til å bruke denne kommandoen!  &8Permission: %permission%'
-    World: '&cBeklager! &7Du har ikke tillatelse rtp i %world%!  &8Permission: %permission%'
-  DisabledWorld: '&cDeaktivert verden %world%! &7Kan ikke RTP! '
-  Cooldown: '&cBeklager! &7Du kan ikke bruke RTP før om &c%tid% &7sekunder! '
-  Locked: '&cBeklager! &7Du har brukt opp alle RTP-ene dine! '
-  Invalid: '&cUgyldig argument. Prøv '' /%command% help '' '
-  NotOnline: '&cSpilleren &7%player% &cer ikke online!'
-  Delay: '&aTeleporterer om &f%time%&a! Ikke flytt deg! '
-  Moved: '&cDu har flyttet deg! &7RTP ble kansellert! '
-  NotExist: '&cSer ut som &7%world% &cIkke eksisterer!'
-  Already: '&cWhoops! &7 Ser ut som om du allerede rtp''er, ha litt tålmodighet! '
-  Sign: '&7Kommandoskilt er opprettet! &7Kommandoen er ... '' &f/rtp %command%&7 '' '
+    Basic:
+      chat:
+        enable: true
+        text: '&cBeklager! &7Du har ikke tillatelse til å bruke denne kommandoen!  &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cBeklager! &7Du har ikke tillatelse til å bruke denne kommandoen!  &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cBeklager! &7Du har ikke tillatelse til å bruke denne kommandoen!  &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cBeklager! &7Du har ikke tillatelse rtp i %world%!  &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cBeklager! &7Du har ikke tillatelse rtp i %world%!  &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cBeklager! &7Du har ikke tillatelse rtp i %world%!  &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cDeaktivert verden %world%! &7Kan ikke RTP! '
+    actionbar:
+      enable: false
+      text: '&cDeaktivert verden %world%! &7Kan ikke RTP! '
+    title:
+      enable: false
+      text: '&cDeaktivert verden %world%! &7Kan ikke RTP! '
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cBeklager! &7Du kan ikke bruke RTP før om &c%tid% &7sekunder! '
+    actionbar:
+      enable: false
+      text: '&cBeklager! &7Du kan ikke bruke RTP før om &c%tid% &7sekunder! '
+    title:
+      enable: false
+      text: '&cBeklager! &7Du kan ikke bruke RTP før om &c%tid% &7sekunder! '
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cBeklager! &7Du har brukt opp alle RTP-ene dine! '
+    actionbar:
+      enable: false
+      text: '&cBeklager! &7Du har brukt opp alle RTP-ene dine! '
+    title:
+      enable: false
+      text: '&cBeklager! &7Du har brukt opp alle RTP-ene dine! '
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cUgyldig argument. Prøv '' /%command% help '' '
+    actionbar:
+      enable: false
+      text: '&cUgyldig argument. Prøv '' /%command% help '' '
+    title:
+      enable: false
+      text: '&cUgyldig argument. Prøv '' /%command% help '' '
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cSpilleren &7%player% &cer ikke online!'
+    actionbar:
+      enable: false
+      text: '&cSpilleren &7%player% &cer ikke online!'
+    title:
+      enable: false
+      text: '&cSpilleren &7%player% &cer ikke online!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeleporterer om &f%time%&a! Ikke flytt deg! '
+    actionbar:
+      enable: false
+      text: '&aTeleporterer om &f%time%&a! Ikke flytt deg! '
+    title:
+      enable: false
+      text: '&aTeleporterer om &f%time%&a! Ikke flytt deg! '
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cDu har flyttet deg! &7RTP ble kansellert! '
+    actionbar:
+      enable: false
+      text: '&cDu har flyttet deg! &7RTP ble kansellert! '
+    title:
+      enable: false
+      text: '&cDu har flyttet deg! &7RTP ble kansellert! '
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cSer ut som &7%world% &cIkke eksisterer!'
+    actionbar:
+      enable: false
+      text: '&cSer ut som &7%world% &cIkke eksisterer!'
+    title:
+      enable: false
+      text: '&cSer ut som &7%world% &cIkke eksisterer!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cWhoops! &7 Ser ut som om du allerede rtp''er, ha litt tålmodighet! '
+    actionbar:
+      enable: false
+      text: '&cWhoops! &7 Ser ut som om du allerede rtp''er, ha litt tålmodighet! '
+    title:
+      enable: false
+      text: '&cWhoops! &7 Ser ut som om du allerede rtp''er, ha litt tålmodighet! '
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Kommandoskilt er opprettet! &7Kommandoen er ... '' &f/rtp %command%&7 '' '
+    actionbar:
+      enable: false
+      text: '&7Kommandoskilt er opprettet! &7Kommandoen er ... '' &f/rtp %command%&7 '' '
+    title:
+      enable: false
+      text: '&7Kommandoskilt er opprettet! &7Kommandoen er ... '' &f/rtp %command%&7 '' '
+      subtitle:
+        enable: false
+        text: ''
   Edit: 
-    Error: '&cError! &7Ugyldig verdi er gitt! '
-    Set: '&bSuksess! &7%type% satt til %value%'
-    Remove: '&cFjernet! &7Du fjernet egendefinert verden %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cError! &7Ugyldig verdi er gitt! '
+      actionbar:
+        enable: false
+        text: '&cError! &7Ugyldig verdi er gitt! '
+      title:
+        enable: false
+        text: '&cError! &7Ugyldig verdi er gitt! '
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bSuksess! &7%type% satt til %value%'
+      actionbar:
+        enable: false
+        text: '&bSuksess! &7%type% satt til %value%'
+      title:
+        enable: false
+        text: '&bSuksess! &7%type% satt til %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cFjernet! &7Du fjernet egendefinert verden %world%'
+      actionbar:
+        enable: false
+        text: '&cFjernet! &7Du fjernet egendefinert verden %world%'
+      title:
+        enable: false
+        text: '&cFjernet! &7Du fjernet egendefinert verden %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e &m ----- &6 &l BetterRTP &8 | Hjelp &e &m ----- '

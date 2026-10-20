@@ -1,6 +1,7 @@
 package me.SuperRonanCraft.BetterRTP.references.file;
 
 import me.SuperRonanCraft.BetterRTP.BetterRTP;
+import me.SuperRonanCraft.BetterRTP.references.file.config.ConfigFileMigration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
@@ -56,6 +57,12 @@ public class FileOther {
         @Override
         public String fileName() {
             return fileName;
+        }
+
+        @Override
+        public void beforeDefaults(YamlConfiguration loaded, YamlConfiguration bundled) {
+            if (this == CONFIG)
+                ConfigFileMigration.migrate(file, loaded, bundled, plugin().getLogger());
         }
     }
 }

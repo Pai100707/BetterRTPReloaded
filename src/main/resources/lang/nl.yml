@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Translation author: QuestalNetwork (Spigot) and GeleVla (GitHub)
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success: # # Placeholders! %x% %y% and %z% are the x, y, and z coordinates that the player is being teleported to! #
-    Paid: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z% voor &c$%price%&7!'
-    Bypass: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z%'
-    Loading: '&aVeilige plek gevonden! &7Laden van chunks...'
-    Teleport: '&aTeleporteren... &7Wacht even terwijl we een veilige plek zoeken!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z% voor &c$%price%&7!'
+      actionbar:
+        enable: false
+        text: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z% voor &c$%price%&7!'
+      title:
+        enable: false
+        text: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z% voor &c$%price%&7!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&aJe bent random geteleporteerd naar&7 x=%x% y=%y% z=%z%'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aVeilige plek gevonden! &7Laden van chunks...'
+      actionbar:
+        enable: false
+        text: '&aVeilige plek gevonden! &7Laden van chunks...'
+      title:
+        enable: false
+        text: '&aVeilige plek gevonden! &7Laden van chunks...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTeleporteren... &7Wacht even terwijl we een veilige plek zoeken!'
+      actionbar:
+        enable: false
+        text: '&aTeleporteren... &7Wacht even terwijl we een veilige plek zoeken!'
+      title:
+        enable: false
+        text: '&aTeleporteren... &7Wacht even terwijl we een veilige plek zoeken!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cKon niet teleporteren wegens onvoldoende fondsen! &7Je moet minstens $%price% &7hebben om random te teleporteren!'
-    NotSafe: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7Je werd niet random geteleporteerd!'
-    Hunger: '&cKon niet random teleporteren omdat je... &7te hongerig&c bent, eet iets!'
+    Price:
+      chat:
+        enable: true
+        text: '&cKon niet teleporteren wegens onvoldoende fondsen! &7Je moet minstens $%price% &7hebben om random te teleporteren!'
+      actionbar:
+        enable: false
+        text: '&cKon niet teleporteren wegens onvoldoende fondsen! &7Je moet minstens $%price% &7hebben om random te teleporteren!'
+      title:
+        enable: false
+        text: '&cKon niet teleporteren wegens onvoldoende fondsen! &7Je moet minstens $%price% &7hebben om random te teleporteren!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7Je werd niet random geteleporteerd!'
+      actionbar:
+        enable: false
+        text: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7Je werd niet random geteleporteerd!'
+      title:
+        enable: false
+        text: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7Je werd niet random geteleporteerd!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cKon niet random teleporteren omdat je... &7te hongerig&c bent, eet iets!'
+      actionbar:
+        enable: false
+        text: '&cKon niet random teleporteren omdat je... &7te hongerig&c bent, eet iets!'
+      title:
+        enable: false
+        text: '&cKon niet random teleporteren omdat je... &7te hongerig&c bent, eet iets!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% is geteleporteerd naar&7 x=%x% y=%y% z=%z%!'
-    NotSafe: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7%player% is niet random geteleporteerd!'
-    Biome: '&cHet lijkt erop dat de biome&7 %biome%&c niet bestaat! &7Probeer de tabbladenlijst te gebruiken!'
-  Reload: '&eConfig herlaadde met succes!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% is geteleporteerd naar&7 x=%x% y=%y% z=%z%!'
+      actionbar:
+        enable: false
+        text: '&a%player% is geteleporteerd naar&7 x=%x% y=%y% z=%z%!'
+      title:
+        enable: false
+        text: '&a%player% is geteleporteerd naar&7 x=%x% y=%y% z=%z%!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7%player% is niet random geteleporteerd!'
+      actionbar:
+        enable: false
+        text: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7%player% is niet random geteleporteerd!'
+      title:
+        enable: false
+        text: '&cKon geen veilige plek vinden binnen %attempts% pogingen! &7%player% is niet random geteleporteerd!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cHet lijkt erop dat de biome&7 %biome%&c niet bestaat! &7Probeer de tabbladenlijst te gebruiken!'
+      actionbar:
+        enable: false
+        text: '&cHet lijkt erop dat de biome&7 %biome%&c niet bestaat! &7Probeer de tabbladenlijst te gebruiken!'
+      title:
+        enable: false
+        text: '&cHet lijkt erop dat de biome&7 %biome%&c niet bestaat! &7Probeer de tabbladenlijst te gebruiken!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eConfig herlaadde met succes!'
+    actionbar:
+      enable: false
+      text: '&eConfig herlaadde met succes!'
+    title:
+      enable: false
+      text: '&eConfig herlaadde met succes!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cSorry! &7Je hebt geen toestemming om dit commando te gebruiken! &8Permission: %permission%'
-    World: '&cSorry! &7Je mag geen rtp in de %world% wereld! &8Permission: %permission%'
-  DisabledWorld: '&cUitgeschakelde wereld %world%! &7Kon geen rtp!'
-  Cooldown: '&cSorry! &7Je kunt niet rtp gebruiken voor nog eens &c%time%&7!'
-  Locked: '&cSorry! &7Je hebt al je rtp''s opgebruikt!'
-  Invalid: '&cOngeldig argument. Probeer ''/%command% help'''
-  NotOnline: '&cDe speler &7%player% &cis niet online!'
-  Delay: '&aTeleporteren in &f%time% &aseconden! Beweeg je niet!'
-  Moved: '&cJe bewoog! &7rtp werd geannuleerd!'
-  NotExist: '&cHet lijkt wel of de wereld &7%world% &cniet bestaat!'
-  Already: '&cWhoops! &7Het lijkt erop dat je al aan het rtp''en bent, heb nog wat geduld!'
-  Sign: '&7Command sign is gemaakt! &7Command is... ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cSorry! &7Je hebt geen toestemming om dit commando te gebruiken! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cSorry! &7Je hebt geen toestemming om dit commando te gebruiken! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cSorry! &7Je hebt geen toestemming om dit commando te gebruiken! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cSorry! &7Je mag geen rtp in de %world% wereld! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cSorry! &7Je mag geen rtp in de %world% wereld! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cSorry! &7Je mag geen rtp in de %world% wereld! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cUitgeschakelde wereld %world%! &7Kon geen rtp!'
+    actionbar:
+      enable: false
+      text: '&cUitgeschakelde wereld %world%! &7Kon geen rtp!'
+    title:
+      enable: false
+      text: '&cUitgeschakelde wereld %world%! &7Kon geen rtp!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cSorry! &7Je kunt niet rtp gebruiken voor nog eens &c%time%&7!'
+    actionbar:
+      enable: false
+      text: '&cSorry! &7Je kunt niet rtp gebruiken voor nog eens &c%time%&7!'
+    title:
+      enable: false
+      text: '&cSorry! &7Je kunt niet rtp gebruiken voor nog eens &c%time%&7!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cSorry! &7Je hebt al je rtp''s opgebruikt!'
+    actionbar:
+      enable: false
+      text: '&cSorry! &7Je hebt al je rtp''s opgebruikt!'
+    title:
+      enable: false
+      text: '&cSorry! &7Je hebt al je rtp''s opgebruikt!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cOngeldig argument. Probeer ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cOngeldig argument. Probeer ''/%command% help'''
+    title:
+      enable: false
+      text: '&cOngeldig argument. Probeer ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cDe speler &7%player% &cis niet online!'
+    actionbar:
+      enable: false
+      text: '&cDe speler &7%player% &cis niet online!'
+    title:
+      enable: false
+      text: '&cDe speler &7%player% &cis niet online!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeleporteren in &f%time% &aseconden! Beweeg je niet!'
+    actionbar:
+      enable: false
+      text: '&aTeleporteren in &f%time% &aseconden! Beweeg je niet!'
+    title:
+      enable: false
+      text: '&aTeleporteren in &f%time% &aseconden! Beweeg je niet!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cJe bewoog! &7rtp werd geannuleerd!'
+    actionbar:
+      enable: false
+      text: '&cJe bewoog! &7rtp werd geannuleerd!'
+    title:
+      enable: false
+      text: '&cJe bewoog! &7rtp werd geannuleerd!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cHet lijkt wel of de wereld &7%world% &cniet bestaat!'
+    actionbar:
+      enable: false
+      text: '&cHet lijkt wel of de wereld &7%world% &cniet bestaat!'
+    title:
+      enable: false
+      text: '&cHet lijkt wel of de wereld &7%world% &cniet bestaat!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cWhoops! &7Het lijkt erop dat je al aan het rtp''en bent, heb nog wat geduld!'
+    actionbar:
+      enable: false
+      text: '&cWhoops! &7Het lijkt erop dat je al aan het rtp''en bent, heb nog wat geduld!'
+    title:
+      enable: false
+      text: '&cWhoops! &7Het lijkt erop dat je al aan het rtp''en bent, heb nog wat geduld!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Command sign is gemaakt! &7Command is... ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Command sign is gemaakt! &7Command is... ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7Command sign is gemaakt! &7Command is... ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cFout! &7Ongeldige invoer gegeven!'
-    Set: '&bSucces! &7%type% ingesteld op %value%'
-    Remove: '&cVerwijderd! &7Je verwijderde de aangepaste wereld %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cFout! &7Ongeldige invoer gegeven!'
+      actionbar:
+        enable: false
+        text: '&cFout! &7Ongeldige invoer gegeven!'
+      title:
+        enable: false
+        text: '&cFout! &7Ongeldige invoer gegeven!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bSucces! &7%type% ingesteld op %value%'
+      actionbar:
+        enable: false
+        text: '&bSucces! &7%type% ingesteld op %value%'
+      title:
+        enable: false
+        text: '&bSucces! &7%type% ingesteld op %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cVerwijderd! &7Je verwijderde de aangepaste wereld %world%'
+      actionbar:
+        enable: false
+        text: '&cVerwijderd! &7Je verwijderde de aangepaste wereld %world%'
+      title:
+        enable: false
+        text: '&cVerwijderd! &7Je verwijderde de aangepaste wereld %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Help &e&m-----'

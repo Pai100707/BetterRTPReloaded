@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Translation author: OasisAkari (GitHub), Kamiya (GitHub)
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success: ## Placeholders! %x% %y% 和 %z% 是玩家要被傳送到的對應 x y z 座標! #
-    Paid: '&a您花費了&c$%price%&7，被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
-    Bypass: '&a您被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
-    Loading: '&a已定位安全位置！&7正在讀取區塊...'
-    Teleport: '&a傳送中... &f請燒等我們正在幫你尋找安全的地點！'
+    Paid:
+      chat:
+        enable: true
+        text: '&a您花費了&c$%price%&7，被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+      actionbar:
+        enable: false
+        text: '&a您花費了&c$%price%&7，被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+      title:
+        enable: false
+        text: '&a您花費了&c$%price%&7，被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&a您被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+      actionbar:
+        enable: false
+        text: '&a您被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+      title:
+        enable: false
+        text: '&a您被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&a已定位安全位置！&7正在讀取區塊...'
+      actionbar:
+        enable: false
+        text: '&a已定位安全位置！&7正在讀取區塊...'
+      title:
+        enable: false
+        text: '&a已定位安全位置！&7正在讀取區塊...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&a傳送中... &f請燒等我們正在幫你尋找安全的地點！'
+      actionbar:
+        enable: false
+        text: '&a傳送中... &f請燒等我們正在幫你尋找安全的地點！'
+      title:
+        enable: false
+        text: '&a傳送中... &f請燒等我們正在幫你尋找安全的地點！'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&c您的資金不夠了！&7您需要有$%price%&7才能嘗試RTP！'
-    NotSafe: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7您未被傳送！'
-    Hunger: '&c無法隨機傳送... 你太&7飢餓&c了，先吃點東西吧!'
+    Price:
+      chat:
+        enable: true
+        text: '&c您的資金不夠了！&7您需要有$%price%&7才能嘗試RTP！'
+      actionbar:
+        enable: false
+        text: '&c您的資金不夠了！&7您需要有$%price%&7才能嘗試RTP！'
+      title:
+        enable: false
+        text: '&c您的資金不夠了！&7您需要有$%price%&7才能嘗試RTP！'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7您未被傳送！'
+      actionbar:
+        enable: false
+        text: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7您未被傳送！'
+      title:
+        enable: false
+        text: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7您未被傳送！'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&c無法隨機傳送... 你太&7飢餓&c了，先吃點東西吧!'
+      actionbar:
+        enable: false
+        text: '&c無法隨機傳送... 你太&7飢餓&c了，先吃點東西吧!'
+      title:
+        enable: false
+        text: '&c無法隨機傳送... 你太&7飢餓&c了，先吃點東西吧!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player%被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
-    NotSafe: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7%player%未被傳送！'
-    Biome: '&c看上去&7%biome%&c生態域不存在，&7試試使用Tab清單查找吧！'
-  Reload: '&e配置成功重新加載！'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player%被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+      actionbar:
+        enable: false
+        text: '&a%player%被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+      title:
+        enable: false
+        text: '&a%player%被傳送到了&7 x=%x% y=%y% z=%z%。一共嘗試&f%attempts%&7次！'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7%player%未被傳送！'
+      actionbar:
+        enable: false
+        text: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7%player%未被傳送！'
+      title:
+        enable: false
+        text: '&c由於%attempts%次嘗試內未能找到適合的地方傳送，&7%player%未被傳送！'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&c看上去&7%biome%&c生態域不存在，&7試試使用Tab清單查找吧！'
+      actionbar:
+        enable: false
+        text: '&c看上去&7%biome%&c生態域不存在，&7試試使用Tab清單查找吧！'
+      title:
+        enable: false
+        text: '&c看上去&7%biome%&c生態域不存在，&7試試使用Tab清單查找吧！'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&e配置成功重新加載！'
+    actionbar:
+      enable: false
+      text: '&e配置成功重新加載！'
+    title:
+      enable: false
+      text: '&e配置成功重新加載！'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&c抱歉，&7您沒有權限使用此指令！ &8Permission: %permission%'
-    World: '&c抱歉，&7您不能在%world%世界傳送！ &8Permission: %permission%'
-  DisabledWorld: '&c%world%世界已被禁止使用此指令，&7您無法傳送！'
-  Cooldown: '&c抱歉，&7您需要在&c%time%&7秒後才能嘗試傳送！'
-  Locked: '&c抱歉！&7你已用光了你的隨機傳送！'
-  Invalid: '&c無效的參數，請使用''/%command% help''查看幫助。'
-  NotOnline: '&c玩家&7%player%&c不在線！'
-  Delay: '&a即將在&f%time%&a秒後傳送，請站好！'
-  Moved: '&c您移動了，&7隨機傳送被取消了！'
-  NotExist: '&c看上去&7%world%&c世界並不存在！'
-  Already: '&c哎呦！&7看上去您已經在傳送中了，耐心一點點！'
-  Sign: '&7指令標記已創建！&7指令為''&f/rtp %command%&7''。'
+    Basic:
+      chat:
+        enable: true
+        text: '&c抱歉，&7您沒有權限使用此指令！ &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&c抱歉，&7您沒有權限使用此指令！ &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&c抱歉，&7您沒有權限使用此指令！ &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&c抱歉，&7您不能在%world%世界傳送！ &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&c抱歉，&7您不能在%world%世界傳送！ &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&c抱歉，&7您不能在%world%世界傳送！ &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&c%world%世界已被禁止使用此指令，&7您無法傳送！'
+    actionbar:
+      enable: false
+      text: '&c%world%世界已被禁止使用此指令，&7您無法傳送！'
+    title:
+      enable: false
+      text: '&c%world%世界已被禁止使用此指令，&7您無法傳送！'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&c抱歉，&7您需要在&c%time%&7秒後才能嘗試傳送！'
+    actionbar:
+      enable: false
+      text: '&c抱歉，&7您需要在&c%time%&7秒後才能嘗試傳送！'
+    title:
+      enable: false
+      text: '&c抱歉，&7您需要在&c%time%&7秒後才能嘗試傳送！'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&c抱歉！&7你已用光了你的隨機傳送！'
+    actionbar:
+      enable: false
+      text: '&c抱歉！&7你已用光了你的隨機傳送！'
+    title:
+      enable: false
+      text: '&c抱歉！&7你已用光了你的隨機傳送！'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&c無效的參數，請使用''/%command% help''查看幫助。'
+    actionbar:
+      enable: false
+      text: '&c無效的參數，請使用''/%command% help''查看幫助。'
+    title:
+      enable: false
+      text: '&c無效的參數，請使用''/%command% help''查看幫助。'
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&c玩家&7%player%&c不在線！'
+    actionbar:
+      enable: false
+      text: '&c玩家&7%player%&c不在線！'
+    title:
+      enable: false
+      text: '&c玩家&7%player%&c不在線！'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&a即將在&f%time%&a秒後傳送，請站好！'
+    actionbar:
+      enable: false
+      text: '&a即將在&f%time%&a秒後傳送，請站好！'
+    title:
+      enable: false
+      text: '&a即將在&f%time%&a秒後傳送，請站好！'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&c您移動了，&7隨機傳送被取消了！'
+    actionbar:
+      enable: false
+      text: '&c您移動了，&7隨機傳送被取消了！'
+    title:
+      enable: false
+      text: '&c您移動了，&7隨機傳送被取消了！'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&c看上去&7%world%&c世界並不存在！'
+    actionbar:
+      enable: false
+      text: '&c看上去&7%world%&c世界並不存在！'
+    title:
+      enable: false
+      text: '&c看上去&7%world%&c世界並不存在！'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&c哎呦！&7看上去您已經在傳送中了，耐心一點點！'
+    actionbar:
+      enable: false
+      text: '&c哎呦！&7看上去您已經在傳送中了，耐心一點點！'
+    title:
+      enable: false
+      text: '&c哎呦！&7看上去您已經在傳送中了，耐心一點點！'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7指令標記已創建！&7指令為''&f/rtp %command%&7''。'
+    actionbar:
+      enable: false
+      text: '&7指令標記已創建！&7指令為''&f/rtp %command%&7''。'
+    title:
+      enable: false
+      text: '&7指令標記已創建！&7指令為''&f/rtp %command%&7''。'
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&c錯誤！&7無效的輸入！'
-    Set: '&b成功！&7%type% 已設為 %value%。'
-    Remove: '&c已刪除！&7你刪除了自訂義世界 %world%。'
+    Error:
+      chat:
+        enable: true
+        text: '&c錯誤！&7無效的輸入！'
+      actionbar:
+        enable: false
+        text: '&c錯誤！&7無效的輸入！'
+      title:
+        enable: false
+        text: '&c錯誤！&7無效的輸入！'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&b成功！&7%type% 已設為 %value%。'
+      actionbar:
+        enable: false
+        text: '&b成功！&7%type% 已設為 %value%。'
+      title:
+        enable: false
+        text: '&b成功！&7%type% 已設為 %value%。'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&c已刪除！&7你刪除了自訂義世界 %world%。'
+      actionbar:
+        enable: false
+        text: '&c已刪除！&7你刪除了自訂義世界 %world%。'
+      title:
+        enable: false
+        text: '&c已刪除！&7你刪除了自訂義世界 %world%。'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| 幫助 &e&m-----'

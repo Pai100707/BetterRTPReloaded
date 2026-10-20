@@ -10,6 +10,8 @@ import org.jetbrains.annotations.NotNull;
 
 import me.SuperRonanCraft.BetterRTP.BetterRTP;
 import me.SuperRonanCraft.BetterRTP.references.file.FileOther;
+import me.SuperRonanCraft.BetterRTP.references.file.config.ConfigLists;
+import me.SuperRonanCraft.BetterRTP.references.file.config.CustomWorldSettings;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.PermissionGroup;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.worlds.RTPWorld;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.worlds.WORLD_TYPE;
@@ -29,6 +31,10 @@ public class RTPLoader {
             for (Map<?, ?> m : map)
                 for (Map.Entry<?, ?> entry : m.entrySet()) {
                     String world = entry.getKey().toString();
+                    if (!CustomWorldSettings.isEnabled(entry.getValue())) { //`enable: false` -> this world uses the Default settings
+                        BetterRTP.debug("Custom World '" + world + "' is disabled (enable: false), using the Default settings");
+                        continue;
+                    }
                     AtomicBoolean exists = new AtomicBoolean(false);
                     Bukkit.getWorlds().forEach(w -> {
                         if (w.getName().equals(world))
@@ -50,7 +56,7 @@ public class RTPLoader {
         overriden.clear();
         try {
             FileOther.FILETYPE config = FileOther.FILETYPE.CONFIG;
-            List<Map<?, ?>> override_map = config.getMapList("Overrides");
+            List<Map<?, ?>> override_map = ConfigLists.activeMaps(ConfigLists.read(config.getConfig(), "Overrides")); //none while `enable: false`
             for (Map<?, ?> m : override_map)
                 for (Map.Entry<?, ?> entry : m.entrySet()) {
                     overriden.put(entry.getKey().toString(), entry.getValue().toString());
