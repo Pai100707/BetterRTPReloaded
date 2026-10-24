@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Hebrew, Translated by thefourcraft on GitHub (https://github.com/SuperRonanCraft/BetterRTP/pull/108)
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aשוגרתם ל&f x=%x% y=%y% z=%z% במחיר &c$%price%&7 המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
-    Bypass: '&aשוגרתם ל&f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות'
-    Loading: '&aמקום בטוח נמצא! &fטוען צ''אנקים...'
-    Teleport: '&aמשגר... &fבבקשה להמתין מחפש מקום בטוח לשיגור!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aשוגרתם ל&f x=%x% y=%y% z=%z% במחיר &c$%price%&7 המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
+      actionbar:
+        enable: false
+        text: '&aשוגרתם ל&f x=%x% y=%y% z=%z% במחיר &c$%price%&7 המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
+      title:
+        enable: false
+        text: '&aשוגרתם ל&f x=%x% y=%y% z=%z% במחיר &c$%price%&7 המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aשוגרתם ל&f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות'
+      actionbar:
+        enable: false
+        text: '&aשוגרתם ל&f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות'
+      title:
+        enable: false
+        text: '&aשוגרתם ל&f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aמקום בטוח נמצא! &fטוען צ''אנקים...'
+      actionbar:
+        enable: false
+        text: '&aמקום בטוח נמצא! &fטוען צ''אנקים...'
+      title:
+        enable: false
+        text: '&aמקום בטוח נמצא! &fטוען צ''אנקים...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aמשגר... &fבבקשה להמתין מחפש מקום בטוח לשיגור!'
+      actionbar:
+        enable: false
+        text: '&aמשגר... &fבבקשה להמתין מחפש מקום בטוח לשיגור!'
+      title:
+        enable: false
+        text: '&aמשגר... &fבבקשה להמתין מחפש מקום בטוח לשיגור!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cלא היה לכם מספיק כסף בשביל להשתגר! &fצריך שיהיה לכם לפחות $%price% &7בשביללהשתגר!'
-    NotSafe: '&cמערכת לא הצליחה, לקח למערכת %attempts% נסיונות! &fלא שוגרתם לשום מקום!'
-    Hunger: '&cלא שוגרתם בגלל. &fשאתם רעבים מידי&c, בבקשה לאכול משהו ואז נשגר אתכם!'
+    Price:
+      chat:
+        enable: true
+        text: '&cלא היה לכם מספיק כסף בשביל להשתגר! &fצריך שיהיה לכם לפחות $%price% &7בשביללהשתגר!'
+      actionbar:
+        enable: false
+        text: '&cלא היה לכם מספיק כסף בשביל להשתגר! &fצריך שיהיה לכם לפחות $%price% &7בשביללהשתגר!'
+      title:
+        enable: false
+        text: '&cלא היה לכם מספיק כסף בשביל להשתגר! &fצריך שיהיה לכם לפחות $%price% &7בשביללהשתגר!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cמערכת לא הצליחה, לקח למערכת %attempts% נסיונות! &fלא שוגרתם לשום מקום!'
+      actionbar:
+        enable: false
+        text: '&cמערכת לא הצליחה, לקח למערכת %attempts% נסיונות! &fלא שוגרתם לשום מקום!'
+      title:
+        enable: false
+        text: '&cמערכת לא הצליחה, לקח למערכת %attempts% נסיונות! &fלא שוגרתם לשום מקום!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cלא שוגרתם בגלל. &fשאתם רעבים מידי&c, בבקשה לאכול משהו ואז נשגר אתכם!'
+      actionbar:
+        enable: false
+        text: '&cלא שוגרתם בגלל. &fשאתם רעבים מידי&c, בבקשה לאכול משהו ואז נשגר אתכם!'
+      title:
+        enable: false
+        text: '&cלא שוגרתם בגלל. &fשאתם רעבים מידי&c, בבקשה לאכול משהו ואז נשגר אתכם!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% שוגר ל &f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
-    NotSafe: '&cמערכת לא הצליחה למצוא מקום בטוח ב %attempts% נסיונות! &f%player% לאשוגר לשום מקום!'
-    Biome: '&cהסביבה שהוגדרה לשיגור &f %biome%&c לא קיימת! &fנסו להשתמש ב TAB!'
-  Reload: '&eהמערכת עשתה הפעלה מחדש בהצלחה!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% שוגר ל &f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
+      actionbar:
+        enable: false
+        text: '&a%player% שוגר ל &f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
+      title:
+        enable: false
+        text: '&a%player% שוגר ל &f x=%x% y=%y% z=%z% המערכת עשתה זאת ב &f%attempts% &7נסיונות!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cמערכת לא הצליחה למצוא מקום בטוח ב %attempts% נסיונות! &f%player% לאשוגר לשום מקום!'
+      actionbar:
+        enable: false
+        text: '&cמערכת לא הצליחה למצוא מקום בטוח ב %attempts% נסיונות! &f%player% לאשוגר לשום מקום!'
+      title:
+        enable: false
+        text: '&cמערכת לא הצליחה למצוא מקום בטוח ב %attempts% נסיונות! &f%player% לאשוגר לשום מקום!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cהסביבה שהוגדרה לשיגור &f %biome%&c לא קיימת! &fנסו להשתמש ב TAB!'
+      actionbar:
+        enable: false
+        text: '&cהסביבה שהוגדרה לשיגור &f %biome%&c לא קיימת! &fנסו להשתמש ב TAB!'
+      title:
+        enable: false
+        text: '&cהסביבה שהוגדרה לשיגור &f %biome%&c לא קיימת! &fנסו להשתמש ב TAB!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eהמערכת עשתה הפעלה מחדש בהצלחה!'
+    actionbar:
+      enable: false
+      text: '&eהמערכת עשתה הפעלה מחדש בהצלחה!'
+    title:
+      enable: false
+      text: '&eהמערכת עשתה הפעלה מחדש בהצלחה!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&c&lהיי! &fאין לך גישה להשתמש בפקודה הזאת!  &8Permission: %permission%'
-    World: '&c&lהיי! &fאסור לעשות כאן שיגור. אפשר רק בשרת ההישרדות!  &8Permission: %permission%'
-  DisabledWorld: '&cהשרת מבוטל! &fאי אפשר להשתגר!'
-  Cooldown: '&c&lהיי! &fאי אפשר להשתגר עכשיו חכו בבקשה &c%time% &fשניות!'
-  Locked: '&c&lהיי! &fהשתמשתם בכל השיגורים שלכם!'
-  Invalid: '&cפקודה שגוייה. &fעשו ''/%command% help'''
-  NotOnline: '&cהשחקן &f%player% &cלא מחובר!'
-  Delay: '&aמשגר אתכם בעוד &f%time% &aשניות! &f&lלא לזוז!'
-  Moved: '&cזזתם! &fפעולת השיגור בוטלה!'
-  NotExist: '&cזה נראה כאילו העולם\שרת &f%world% &cלא קיימים!'
-  Already: '&cאופסי! &fהמערכת כבר עובדת על למצוא לכם מקום שיגור!'
-  Sign: '&7נוצרה פקודה חדשה! &fהפקודה היא... ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&c&lהיי! &fאין לך גישה להשתמש בפקודה הזאת!  &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&c&lהיי! &fאין לך גישה להשתמש בפקודה הזאת!  &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&c&lהיי! &fאין לך גישה להשתמש בפקודה הזאת!  &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&c&lהיי! &fאסור לעשות כאן שיגור. אפשר רק בשרת ההישרדות!  &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&c&lהיי! &fאסור לעשות כאן שיגור. אפשר רק בשרת ההישרדות!  &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&c&lהיי! &fאסור לעשות כאן שיגור. אפשר רק בשרת ההישרדות!  &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cהשרת מבוטל! &fאי אפשר להשתגר!'
+    actionbar:
+      enable: false
+      text: '&cהשרת מבוטל! &fאי אפשר להשתגר!'
+    title:
+      enable: false
+      text: '&cהשרת מבוטל! &fאי אפשר להשתגר!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&c&lהיי! &fאי אפשר להשתגר עכשיו חכו בבקשה &c%time% &fשניות!'
+    actionbar:
+      enable: false
+      text: '&c&lהיי! &fאי אפשר להשתגר עכשיו חכו בבקשה &c%time% &fשניות!'
+    title:
+      enable: false
+      text: '&c&lהיי! &fאי אפשר להשתגר עכשיו חכו בבקשה &c%time% &fשניות!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&c&lהיי! &fהשתמשתם בכל השיגורים שלכם!'
+    actionbar:
+      enable: false
+      text: '&c&lהיי! &fהשתמשתם בכל השיגורים שלכם!'
+    title:
+      enable: false
+      text: '&c&lהיי! &fהשתמשתם בכל השיגורים שלכם!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cפקודה שגוייה. &fעשו ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cפקודה שגוייה. &fעשו ''/%command% help'''
+    title:
+      enable: false
+      text: '&cפקודה שגוייה. &fעשו ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cהשחקן &f%player% &cלא מחובר!'
+    actionbar:
+      enable: false
+      text: '&cהשחקן &f%player% &cלא מחובר!'
+    title:
+      enable: false
+      text: '&cהשחקן &f%player% &cלא מחובר!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aמשגר אתכם בעוד &f%time% &aשניות! &f&lלא לזוז!'
+    actionbar:
+      enable: false
+      text: '&aמשגר אתכם בעוד &f%time% &aשניות! &f&lלא לזוז!'
+    title:
+      enable: false
+      text: '&aמשגר אתכם בעוד &f%time% &aשניות! &f&lלא לזוז!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cזזתם! &fפעולת השיגור בוטלה!'
+    actionbar:
+      enable: false
+      text: '&cזזתם! &fפעולת השיגור בוטלה!'
+    title:
+      enable: false
+      text: '&cזזתם! &fפעולת השיגור בוטלה!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cזה נראה כאילו העולם\שרת &f%world% &cלא קיימים!'
+    actionbar:
+      enable: false
+      text: '&cזה נראה כאילו העולם\שרת &f%world% &cלא קיימים!'
+    title:
+      enable: false
+      text: '&cזה נראה כאילו העולם\שרת &f%world% &cלא קיימים!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cאופסי! &fהמערכת כבר עובדת על למצוא לכם מקום שיגור!'
+    actionbar:
+      enable: false
+      text: '&cאופסי! &fהמערכת כבר עובדת על למצוא לכם מקום שיגור!'
+    title:
+      enable: false
+      text: '&cאופסי! &fהמערכת כבר עובדת על למצוא לכם מקום שיגור!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7נוצרה פקודה חדשה! &fהפקודה היא... ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7נוצרה פקודה חדשה! &fהפקודה היא... ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7נוצרה פקודה חדשה! &fהפקודה היא... ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&c&lהיי! &cנתונים שגויים הוקלדו!'
-    Set: '&bהצלחה! &c%type% שונה ל %value%'
-    Remove: '&cנמחק! &fמחקתם את העולם %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&c&lהיי! &cנתונים שגויים הוקלדו!'
+      actionbar:
+        enable: false
+        text: '&c&lהיי! &cנתונים שגויים הוקלדו!'
+      title:
+        enable: false
+        text: '&c&lהיי! &cנתונים שגויים הוקלדו!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bהצלחה! &c%type% שונה ל %value%'
+      actionbar:
+        enable: false
+        text: '&bהצלחה! &c%type% שונה ל %value%'
+      title:
+        enable: false
+        text: '&bהצלחה! &c%type% שונה ל %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cנמחק! &fמחקתם את העולם %world%'
+      actionbar:
+        enable: false
+        text: '&cנמחק! &fמחקתם את העולם %world%'
+      title:
+        enable: false
+        text: '&cנמחק! &fמחקתם את העולם %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l המשגר &f| עזרה &e&m-----'

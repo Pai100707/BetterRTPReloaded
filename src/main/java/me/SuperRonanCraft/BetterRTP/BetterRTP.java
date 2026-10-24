@@ -16,6 +16,7 @@ import me.SuperRonanCraft.BetterRTP.references.invs.RTPInventories;
 import me.SuperRonanCraft.BetterRTP.references.messages.Message_RTP;
 import me.SuperRonanCraft.BetterRTP.references.messages.MessagesCore;
 import me.SuperRonanCraft.BetterRTP.references.player.playerdata.PlayerDataManager;
+import me.SuperRonanCraft.BetterRTP.references.preload.PreloadHandler;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.CooldownHandler;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.QueueHandler;
 import me.SuperRonanCraft.BetterRTP.references.settings.Settings;
@@ -42,6 +43,7 @@ public class BetterRTP extends JavaPlugin {
     @Getter private final Settings settings = new Settings();
     @Getter private final CooldownHandler cooldowns = new CooldownHandler();
     @Getter private final QueueHandler queue = new QueueHandler();
+    @Getter private final PreloadHandler preload = new PreloadHandler();
     @Getter private final DatabaseHandler databaseHandler = new DatabaseHandler();
     @Getter private final WarningHandler warningHandler = new WarningHandler();
     @Getter private boolean PlaceholderAPI;
@@ -68,6 +70,7 @@ public class BetterRTP extends JavaPlugin {
     public void onDisable() {
         invs.closeAll();
         queue.unload();
+        preload.unload();
         rtpLogger.unload();
     }
 
@@ -113,6 +116,7 @@ public class BetterRTP extends JavaPlugin {
         eco.load();
         perms.register();
         queue.load();
+        preload.load(); //After RTP.load(): needs the world settings
     }
 
     public static void debug(String str) {

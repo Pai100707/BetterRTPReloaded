@@ -11,6 +11,7 @@ import lombok.Getter;
 import me.SuperRonanCraft.BetterRTP.BetterRTP;
 import me.SuperRonanCraft.BetterRTP.references.customEvents.RTP_SettingUpEvent;
 import me.SuperRonanCraft.BetterRTP.references.file.FileOther;
+import me.SuperRonanCraft.BetterRTP.references.file.config.ConfigLists;
 import me.SuperRonanCraft.BetterRTP.references.helpers.HelperRTP;
 import me.SuperRonanCraft.BetterRTP.references.helpers.HelperRTP_Check;
 import me.SuperRonanCraft.BetterRTP.references.rtpinfo.PermissionGroup;
@@ -36,7 +37,7 @@ public class RTP {
 
     public void load() {
         FileOther.FILETYPE config = FileOther.FILETYPE.CONFIG;
-        disabledWorlds = config.getStringList("DisabledWorlds");
+        disabledWorlds = ConfigLists.read(config.getConfig(), "DisabledWorlds").activeStrings(); //empty while `enable: false`
         maxAttempts = config.getInt("Settings.MaxAttempts");
         delayTime = config.getInt("Settings.Delay.Time");
         cancelOnMove = config.getBoolean("Settings.Delay.CancelOnMove");

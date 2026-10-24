@@ -29,6 +29,10 @@ public class QueueGenerator {
     private final int queueMaxAttempts = 50;
     boolean generating;
     private WrappedTask task;
+    //A type that used up its attempts is not tried again until /rtp reload. Without this every /rtp restarted the
+    //counting from zero and generated up to queueMaxAttempts more chunks for a world that never gets a safe spot.
+    private final GenerationLimiter limiter = new GenerationLimiter(1);
+    private final java.util.Set<String> skipped = java.util.concurrent.ConcurrentHashMap.newKeySet(); //Logged once
 
     public void unload() {
         if (task != null)
@@ -38,6 +42,8 @@ public class QueueGenerator {
     public void load() {
         unload();
         loaded = false;
+        limiter.reset();
+        skipped.clear();
         generate(null);
     }
 
@@ -67,17 +73,14 @@ public class QueueGenerator {
                 String type = "rtp_" + (data.rtpWorld.getID() != null ? data.rtpWorld.getID() : data.rtpWorld.getWorld().getName());
                 int newCount = data.lastType.equalsIgnoreCase(type) ? data.lastCount : applicable.size();
                 int attempt = data.lastType.equalsIgnoreCase(type) ? data.attempts + 1: 0;
-                if (newCount < queueMin && applicable.size() < queueMax) {
+                if (!limiter.isExhausted(type) && newCount < queueMin && applicable.size() < queueMax) {
                     if (attempt > queueMaxAttempts) {
-                        BetterRTP.debug("Max attempts to create a Queue reached for " + type + " (amount: " + applicable.size() + ")");
+                        giveUp(type, applicable.size()); //Stops generating for it, the other types below still run
+                    } else {
+                        addQueue(data.rtpWorld, type, new ReQueueData(data.rtpWorld, queueMax, queueMin, newCount, type, attempt)); //Generate another later
                         return;
                     }
-
-                    addQueue(data.rtpWorld, type, new ReQueueData(data.rtpWorld, queueMax, queueMin, newCount, type, attempt)); //Generate another later
-
-                    return;
-                }
-                if (data.lastType.equalsIgnoreCase(type))
+                } else if (data.lastType.equalsIgnoreCase(type))
                     BetterRTP.debug("Queue max reached for " + type + " (amount: " + applicable.size() + ") lastCount: " + data.lastCount);
             }
 
@@ -88,12 +91,20 @@ public class QueueGenerator {
                 for (Map.Entry<String, RTPWorld> rtpWorldEntry : map.entrySet()) {
                     RTPWorld world = rtpWorldEntry.getValue();
                     String type = getId(setup, rtpWorldEntry.getKey());
+                    if (limiter.isExhausted(type))
+                        continue; //Gave up on this one, never generate for it again until a reload
+                    String skip = GenerationTargets.skipReason(world.getWorld().getName(), null, BetterRTP.getInstance().getRTP().overriden);
+                    if (skip != null) { //e.g. `spawn` overridden to `world`: /rtp there lands in the other world, so nothing is queued here
+                        if (skipped.add(type))
+                            BetterRTP.debug("Not queueing positions for '" + type + "': " + skip);
+                        continue;
+                    }
                     List<QueueData> applicable = QueueHandler.getApplicableAsync(world);
                     int newCount = data.lastType.equalsIgnoreCase(type) ? data.lastCount : applicable.size();
                     int attempt = data.lastType.equalsIgnoreCase(type) ? data.attempts + 1 : 0;
                     if (newCount < queueMin && applicable.size() < queueMax) {
                         if (attempt > queueMaxAttempts) {
-                            BetterRTP.debug("Max attempts to create a Queue reached for " + type + " (amount: " + applicable.size() + ")");
+                            giveUp(type, applicable.size());
                             continue;
                         }
                         //Generate a location sync to bukkit api
@@ -108,6 +119,15 @@ public class QueueGenerator {
             generating = false;
             BetterRTP.debug("Queueing paused, max queue limit reached!");
         }, 20L/*delay before starting queue generator*/);
+    }
+
+    /** The attempts are used up: stop generating for this type right away (it keeps its place until /rtp reload). */
+    private void giveUp(String type, int amount) {
+        BetterRTP.debug("Max attempts to create a Queue reached for " + type + " (amount: " + amount + ")");
+        if (limiter.exhaust(type))
+            BetterRTP.getInstance().getLogger().warning("Stopped generating queue positions for '" + type + "': no safe location found after "
+                    + queueMaxAttempts + " attempts (" + amount + " ready). No more chunks are generated for it until /rtp reload. "
+                    + "Check MaxRadius/MinRadius/UseWorldBorder/Biomes of that world, or list the world in DisabledWorlds.");
     }
 
     static class ReQueueData {

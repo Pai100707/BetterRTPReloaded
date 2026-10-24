@@ -1,38 +1,355 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 Messages:
   Prefix: '&7[&6BetterRTP&7]  '
   Success:
-    Paid: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık. &7Ücret: &c$%price%&7!'
-    Bypass: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık.'
-    Loading: '&aGüvenli bir nokta bulundu! &7Bölge yükleniyor...'
-    Teleport: '&aTaşınıyor... &fLütfen güvenli bir konum bulunana kadar bekleyin!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık. &7Ücret: &c$%price%&7!'
+      actionbar:
+        enable: false
+        text: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık. &7Ücret: &c$%price%&7!'
+      title:
+        enable: false
+        text: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık. &7Ücret: &c$%price%&7!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık.'
+      actionbar:
+        enable: false
+        text: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık.'
+      title:
+        enable: false
+        text: '&aSizi x=%x% y=%y% z=%z% konumuna taşıdık.'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aGüvenli bir nokta bulundu! &7Bölge yükleniyor...'
+      actionbar:
+        enable: false
+        text: '&aGüvenli bir nokta bulundu! &7Bölge yükleniyor...'
+      title:
+        enable: false
+        text: '&aGüvenli bir nokta bulundu! &7Bölge yükleniyor...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTaşınıyor... &fLütfen güvenli bir konum bulunana kadar bekleyin!'
+      actionbar:
+        enable: false
+        text: '&aTaşınıyor... &fLütfen güvenli bir konum bulunana kadar bekleyin!'
+      title:
+        enable: false
+        text: '&aTaşınıyor... &fLütfen güvenli bir konum bulunana kadar bekleyin!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cYetersiz bakiye nedeniyle ışınlanma yapılamadı! &7En az &c$%price% &7bakiyeniz
-      olmalı!'
-    NotSafe: '&c%attempts% denemede güvenli bir nokta bulunamadı! &7ışınlanma yapılmadı!'
-    Hunger: '&cÇok aç olduğunuz için ışınlanma yapılamadı, bir şeyler yiyin!'
+    Price:
+      chat:
+        enable: true
+        text: '&cYetersiz bakiye nedeniyle ışınlanma yapılamadı! &7En az &c$%price% &7bakiyeniz
+          olmalı!'
+      actionbar:
+        enable: false
+        text: '&cYetersiz bakiye nedeniyle ışınlanma yapılamadı! &7En az &c$%price% &7bakiyeniz
+          olmalı!'
+      title:
+        enable: false
+        text: '&cYetersiz bakiye nedeniyle ışınlanma yapılamadı! &7En az &c$%price% &7bakiyeniz
+          olmalı!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&c%attempts% denemede güvenli bir nokta bulunamadı! &7ışınlanma yapılmadı!'
+      actionbar:
+        enable: false
+        text: '&c%attempts% denemede güvenli bir nokta bulunamadı! &7ışınlanma yapılmadı!'
+      title:
+        enable: false
+        text: '&c%attempts% denemede güvenli bir nokta bulunamadı! &7ışınlanma yapılmadı!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cÇok aç olduğunuz için ışınlanma yapılamadı, bir şeyler yiyin!'
+      actionbar:
+        enable: false
+        text: '&cÇok aç olduğunuz için ışınlanma yapılamadı, bir şeyler yiyin!'
+      title:
+        enable: false
+        text: '&cÇok aç olduğunuz için ışınlanma yapılamadı, bir şeyler yiyin!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player%, x=%x% y=%y% z=%z% konumuna taşındı.'
-    NotSafe: '&c%attempts% denemede %player%, güvenli bir nokta bulunamadı!'
-    Biome: '&cGörünüşe göre &7%biome%&c biyomu mevcut değil! &7Sekme listesini kullanmayı
-      deneyin!'
-  Reload: '&eAyarlar başarıyla yeniden yüklendi!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player%, x=%x% y=%y% z=%z% konumuna taşındı.'
+      actionbar:
+        enable: false
+        text: '&a%player%, x=%x% y=%y% z=%z% konumuna taşındı.'
+      title:
+        enable: false
+        text: '&a%player%, x=%x% y=%y% z=%z% konumuna taşındı.'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&c%attempts% denemede %player%, güvenli bir nokta bulunamadı!'
+      actionbar:
+        enable: false
+        text: '&c%attempts% denemede %player%, güvenli bir nokta bulunamadı!'
+      title:
+        enable: false
+        text: '&c%attempts% denemede %player%, güvenli bir nokta bulunamadı!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cGörünüşe göre &7%biome%&c biyomu mevcut değil! &7Sekme listesini kullanmayı
+          deneyin!'
+      actionbar:
+        enable: false
+        text: '&cGörünüşe göre &7%biome%&c biyomu mevcut değil! &7Sekme listesini kullanmayı
+          deneyin!'
+      title:
+        enable: false
+        text: '&cGörünüşe göre &7%biome%&c biyomu mevcut değil! &7Sekme listesini kullanmayı
+          deneyin!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eAyarlar başarıyla yeniden yüklendi!'
+    actionbar:
+      enable: false
+      text: '&eAyarlar başarıyla yeniden yüklendi!'
+    title:
+      enable: false
+      text: '&eAyarlar başarıyla yeniden yüklendi!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cÜzgünüz! &7Bu komutu kullanma izniniz yok! &8İzin: %permission%'
-    World: '&cÜzgünüz! &7%world% dünyasında ışınlanma yapma izniniz yok! &8İzin: %permission%'
-  DisabledWorld: '&c%world% Dünyası Devre Dışı! &7ışınlanma yapılamadı!'
-  Cooldown: '&cÜzgünüz! &7Başka bir &c%time% &7saniye boyunca ışınlanma yapamazsınız!'
-  Locked: '&cÜzgünüz! &7Tüm ışınlanma hakkınızı kullandınız!'
-  Invalid: '&cGeçersiz argüman. ''/%command% help'' komutunu deneyin'
-  NotOnline: '&cOyuncu &7%player% &çevrimdışı!'
-  Delay: '&a%time% &asaniye içinde taşınıyor! Lütfen hareket etmeyin!'
-  Moved: '&cHareket ettiniz! &7ışınlanma iptal edildi!'
-  NotExist: '&cGörünüşe göre &7%world% &cdünyası mevcut değil!'
-  Already: '&cHoppla! &7Zaten ışınlanma yapılıyor, lütfen sabırlı olun!'
-  Sign: '&7Komut tabelası oluşturuldu! Komut: ''&f/ışınlanma %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cÜzgünüz! &7Bu komutu kullanma izniniz yok! &8İzin: %permission%'
+      actionbar:
+        enable: false
+        text: '&cÜzgünüz! &7Bu komutu kullanma izniniz yok! &8İzin: %permission%'
+      title:
+        enable: false
+        text: '&cÜzgünüz! &7Bu komutu kullanma izniniz yok! &8İzin: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cÜzgünüz! &7%world% dünyasında ışınlanma yapma izniniz yok! &8İzin: %permission%'
+      actionbar:
+        enable: false
+        text: '&cÜzgünüz! &7%world% dünyasında ışınlanma yapma izniniz yok! &8İzin: %permission%'
+      title:
+        enable: false
+        text: '&cÜzgünüz! &7%world% dünyasında ışınlanma yapma izniniz yok! &8İzin: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&c%world% Dünyası Devre Dışı! &7ışınlanma yapılamadı!'
+    actionbar:
+      enable: false
+      text: '&c%world% Dünyası Devre Dışı! &7ışınlanma yapılamadı!'
+    title:
+      enable: false
+      text: '&c%world% Dünyası Devre Dışı! &7ışınlanma yapılamadı!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cÜzgünüz! &7Başka bir &c%time% &7saniye boyunca ışınlanma yapamazsınız!'
+    actionbar:
+      enable: false
+      text: '&cÜzgünüz! &7Başka bir &c%time% &7saniye boyunca ışınlanma yapamazsınız!'
+    title:
+      enable: false
+      text: '&cÜzgünüz! &7Başka bir &c%time% &7saniye boyunca ışınlanma yapamazsınız!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cÜzgünüz! &7Tüm ışınlanma hakkınızı kullandınız!'
+    actionbar:
+      enable: false
+      text: '&cÜzgünüz! &7Tüm ışınlanma hakkınızı kullandınız!'
+    title:
+      enable: false
+      text: '&cÜzgünüz! &7Tüm ışınlanma hakkınızı kullandınız!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cGeçersiz argüman. ''/%command% help'' komutunu deneyin'
+    actionbar:
+      enable: false
+      text: '&cGeçersiz argüman. ''/%command% help'' komutunu deneyin'
+    title:
+      enable: false
+      text: '&cGeçersiz argüman. ''/%command% help'' komutunu deneyin'
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cOyuncu &7%player% &çevrimdışı!'
+    actionbar:
+      enable: false
+      text: '&cOyuncu &7%player% &çevrimdışı!'
+    title:
+      enable: false
+      text: '&cOyuncu &7%player% &çevrimdışı!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&a%time% &asaniye içinde taşınıyor! Lütfen hareket etmeyin!'
+    actionbar:
+      enable: false
+      text: '&a%time% &asaniye içinde taşınıyor! Lütfen hareket etmeyin!'
+    title:
+      enable: false
+      text: '&a%time% &asaniye içinde taşınıyor! Lütfen hareket etmeyin!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cHareket ettiniz! &7ışınlanma iptal edildi!'
+    actionbar:
+      enable: false
+      text: '&cHareket ettiniz! &7ışınlanma iptal edildi!'
+    title:
+      enable: false
+      text: '&cHareket ettiniz! &7ışınlanma iptal edildi!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cGörünüşe göre &7%world% &cdünyası mevcut değil!'
+    actionbar:
+      enable: false
+      text: '&cGörünüşe göre &7%world% &cdünyası mevcut değil!'
+    title:
+      enable: false
+      text: '&cGörünüşe göre &7%world% &cdünyası mevcut değil!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cHoppla! &7Zaten ışınlanma yapılıyor, lütfen sabırlı olun!'
+    actionbar:
+      enable: false
+      text: '&cHoppla! &7Zaten ışınlanma yapılıyor, lütfen sabırlı olun!'
+    title:
+      enable: false
+      text: '&cHoppla! &7Zaten ışınlanma yapılıyor, lütfen sabırlı olun!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Komut tabelası oluşturuldu! Komut: ''&f/ışınlanma %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Komut tabelası oluşturuldu! Komut: ''&f/ışınlanma %command%&7'''
+    title:
+      enable: false
+      text: '&7Komut tabelası oluşturuldu! Komut: ''&f/ışınlanma %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cHata! &7Geçersiz giriş sağlandı!'
-    Set: '&bBaşarılı! &7%type% değeri %value% olarak ayarlandı.'
-    Remove: '&cKaldırıldı! &7Özel Dünya %world% kaldırıldı.'
+    Error:
+      chat:
+        enable: true
+        text: '&cHata! &7Geçersiz giriş sağlandı!'
+      actionbar:
+        enable: false
+        text: '&cHata! &7Geçersiz giriş sağlandı!'
+      title:
+        enable: false
+        text: '&cHata! &7Geçersiz giriş sağlandı!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bBaşarılı! &7%type% değeri %value% olarak ayarlandı.'
+      actionbar:
+        enable: false
+        text: '&bBaşarılı! &7%type% değeri %value% olarak ayarlandı.'
+      title:
+        enable: false
+        text: '&bBaşarılı! &7%type% değeri %value% olarak ayarlandı.'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cKaldırıldı! &7Özel Dünya %world% kaldırıldı.'
+      actionbar:
+        enable: false
+        text: '&cKaldırıldı! &7Özel Dünya %world% kaldırıldı.'
+      title:
+        enable: false
+        text: '&cKaldırıldı! &7Özel Dünya %world% kaldırıldı.'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l ışınlanma &8| Yardım &e&m-----'

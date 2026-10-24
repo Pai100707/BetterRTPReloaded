@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Vietnamese, Translated by Vo Chi Danh, Discord is VoChiDanh#0862
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aBạn đã được dịch chuyển tới &7 x=%x% y=%y% z=%z% với giá &c$%price%&7 trong &f%attempts% &7lần!'
-    Bypass: '&aBạn đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần'
-    Loading: '&aVị trí an toàn được định vị! &7Tải địa hình...'
-    Teleport: '&aDịch chuyển... &fVui lòng đợi trong khi chúng tôi tìm thấy một vị trí an toàn!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aBạn đã được dịch chuyển tới &7 x=%x% y=%y% z=%z% với giá &c$%price%&7 trong &f%attempts% &7lần!'
+      actionbar:
+        enable: false
+        text: '&aBạn đã được dịch chuyển tới &7 x=%x% y=%y% z=%z% với giá &c$%price%&7 trong &f%attempts% &7lần!'
+      title:
+        enable: false
+        text: '&aBạn đã được dịch chuyển tới &7 x=%x% y=%y% z=%z% với giá &c$%price%&7 trong &f%attempts% &7lần!'
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aBạn đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần'
+      actionbar:
+        enable: false
+        text: '&aBạn đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần'
+      title:
+        enable: false
+        text: '&aBạn đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aVị trí an toàn được định vị! &7Tải địa hình...'
+      actionbar:
+        enable: false
+        text: '&aVị trí an toàn được định vị! &7Tải địa hình...'
+      title:
+        enable: false
+        text: '&aVị trí an toàn được định vị! &7Tải địa hình...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aDịch chuyển... &fVui lòng đợi trong khi chúng tôi tìm thấy một vị trí an toàn!'
+      actionbar:
+        enable: false
+        text: '&aDịch chuyển... &fVui lòng đợi trong khi chúng tôi tìm thấy một vị trí an toàn!'
+      title:
+        enable: false
+        text: '&aDịch chuyển... &fVui lòng đợi trong khi chúng tôi tìm thấy một vị trí an toàn!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cKhông thể rtp vì các quỹ không chính thức! &7Bạn phải có ít nhất $%price% &7để dịch chuyển!'
-    NotSafe: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7Bạn không được dịch chuyển'
-    Hunger: '&cKhông thể dịch chuyển vì bạn... &7quá đóii&c, ăn 1 chút gì đi!'
+    Price:
+      chat:
+        enable: true
+        text: '&cKhông thể rtp vì các quỹ không chính thức! &7Bạn phải có ít nhất $%price% &7để dịch chuyển!'
+      actionbar:
+        enable: false
+        text: '&cKhông thể rtp vì các quỹ không chính thức! &7Bạn phải có ít nhất $%price% &7để dịch chuyển!'
+      title:
+        enable: false
+        text: '&cKhông thể rtp vì các quỹ không chính thức! &7Bạn phải có ít nhất $%price% &7để dịch chuyển!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7Bạn không được dịch chuyển'
+      actionbar:
+        enable: false
+        text: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7Bạn không được dịch chuyển'
+      title:
+        enable: false
+        text: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7Bạn không được dịch chuyển'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cKhông thể dịch chuyển vì bạn... &7quá đóii&c, ăn 1 chút gì đi!'
+      actionbar:
+        enable: false
+        text: '&cKhông thể dịch chuyển vì bạn... &7quá đóii&c, ăn 1 chút gì đi!'
+      title:
+        enable: false
+        text: '&cKhông thể dịch chuyển vì bạn... &7quá đóii&c, ăn 1 chút gì đi!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần tìm kiếm!'
-    NotSafe: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7%player% không được dịch chuyển!'
-    Biome: '&cCó vẻ như biome&7 %biome%&c không tồn tại! &7Hãy thử dùng trong tablist!'
-  Reload: '&aTải lại config thành công!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần tìm kiếm!'
+      actionbar:
+        enable: false
+        text: '&a%player% đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần tìm kiếm!'
+      title:
+        enable: false
+        text: '&a%player% đã được dịch chuyển tới&7 x=%x% y=%y% z=%z% trong &f%attempts% &7lần tìm kiếm!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7%player% không được dịch chuyển!'
+      actionbar:
+        enable: false
+        text: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7%player% không được dịch chuyển!'
+      title:
+        enable: false
+        text: '&cKhông thể tìm thấy vị trí an toàn trong %attempts% lần tìm kiếm! &7%player% không được dịch chuyển!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cCó vẻ như biome&7 %biome%&c không tồn tại! &7Hãy thử dùng trong tablist!'
+      actionbar:
+        enable: false
+        text: '&cCó vẻ như biome&7 %biome%&c không tồn tại! &7Hãy thử dùng trong tablist!'
+      title:
+        enable: false
+        text: '&cCó vẻ như biome&7 %biome%&c không tồn tại! &7Hãy thử dùng trong tablist!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&aTải lại config thành công!'
+    actionbar:
+      enable: false
+      text: '&aTải lại config thành công!'
+    title:
+      enable: false
+      text: '&aTải lại config thành công!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cXin Lỗi! &7Bạn không có quyền! &8Permission: %permission%'
-    World: '&cXin Lỗi! &7Bạn không có quyền dịch chuyển đến %world% world! &8Permission: %permission%'
-  DisabledWorld: '&c%world% đã bị tắt dịch chuyển! &7Không thể dịch chuyển!'
-  Cooldown: '&cXin Lỗi! &7Bạn không thể dịc chuyển trong &c%time%&7!'
-  Locked: '&cXin Lỗi! &7Bạn đã sử dụng hết tất cả RTP của mình!'
-  Invalid: '&cĐối số không hợp lệ. Thử ''/%command% help'''
-  NotOnline: '&cNgười chơi &7%player% &ckhông hoạt động!'
-  Delay: '&aDịch chuyển trong f%time% &agiây! Đừng dịch chuyển!'
-  Moved: '&cBạn đã di chuyển! &7Dịch chuyển ngẫu nhiên bị hủy'
-  NotExist: '&cCó vẻ như thế giới &7%world% &ckhông tồn tại!'
-  Already: '&cCó vẻ nhưuu! &7Có vẻ như bạn đã chuẩn bị dịch chuyển, hãy kiên nhẫn một chút!'
-  Sign: '&7Lệnh bảng đã được tạo! &7Lệnh là... ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cXin Lỗi! &7Bạn không có quyền! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cXin Lỗi! &7Bạn không có quyền! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cXin Lỗi! &7Bạn không có quyền! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cXin Lỗi! &7Bạn không có quyền dịch chuyển đến %world% world! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cXin Lỗi! &7Bạn không có quyền dịch chuyển đến %world% world! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cXin Lỗi! &7Bạn không có quyền dịch chuyển đến %world% world! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&c%world% đã bị tắt dịch chuyển! &7Không thể dịch chuyển!'
+    actionbar:
+      enable: false
+      text: '&c%world% đã bị tắt dịch chuyển! &7Không thể dịch chuyển!'
+    title:
+      enable: false
+      text: '&c%world% đã bị tắt dịch chuyển! &7Không thể dịch chuyển!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cXin Lỗi! &7Bạn không thể dịc chuyển trong &c%time%&7!'
+    actionbar:
+      enable: false
+      text: '&cXin Lỗi! &7Bạn không thể dịc chuyển trong &c%time%&7!'
+    title:
+      enable: false
+      text: '&cXin Lỗi! &7Bạn không thể dịc chuyển trong &c%time%&7!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cXin Lỗi! &7Bạn đã sử dụng hết tất cả RTP của mình!'
+    actionbar:
+      enable: false
+      text: '&cXin Lỗi! &7Bạn đã sử dụng hết tất cả RTP của mình!'
+    title:
+      enable: false
+      text: '&cXin Lỗi! &7Bạn đã sử dụng hết tất cả RTP của mình!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cĐối số không hợp lệ. Thử ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cĐối số không hợp lệ. Thử ''/%command% help'''
+    title:
+      enable: false
+      text: '&cĐối số không hợp lệ. Thử ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cNgười chơi &7%player% &ckhông hoạt động!'
+    actionbar:
+      enable: false
+      text: '&cNgười chơi &7%player% &ckhông hoạt động!'
+    title:
+      enable: false
+      text: '&cNgười chơi &7%player% &ckhông hoạt động!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aDịch chuyển trong f%time% &agiây! Đừng dịch chuyển!'
+    actionbar:
+      enable: false
+      text: '&aDịch chuyển trong f%time% &agiây! Đừng dịch chuyển!'
+    title:
+      enable: false
+      text: '&aDịch chuyển trong f%time% &agiây! Đừng dịch chuyển!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cBạn đã di chuyển! &7Dịch chuyển ngẫu nhiên bị hủy'
+    actionbar:
+      enable: false
+      text: '&cBạn đã di chuyển! &7Dịch chuyển ngẫu nhiên bị hủy'
+    title:
+      enable: false
+      text: '&cBạn đã di chuyển! &7Dịch chuyển ngẫu nhiên bị hủy'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cCó vẻ như thế giới &7%world% &ckhông tồn tại!'
+    actionbar:
+      enable: false
+      text: '&cCó vẻ như thế giới &7%world% &ckhông tồn tại!'
+    title:
+      enable: false
+      text: '&cCó vẻ như thế giới &7%world% &ckhông tồn tại!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cCó vẻ nhưuu! &7Có vẻ như bạn đã chuẩn bị dịch chuyển, hãy kiên nhẫn một chút!'
+    actionbar:
+      enable: false
+      text: '&cCó vẻ nhưuu! &7Có vẻ như bạn đã chuẩn bị dịch chuyển, hãy kiên nhẫn một chút!'
+    title:
+      enable: false
+      text: '&cCó vẻ nhưuu! &7Có vẻ như bạn đã chuẩn bị dịch chuyển, hãy kiên nhẫn một chút!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Lệnh bảng đã được tạo! &7Lệnh là... ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Lệnh bảng đã được tạo! &7Lệnh là... ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7Lệnh bảng đã được tạo! &7Lệnh là... ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cLỗi! &7 Đầu vào không hợp lệ được cung cấp!'
-    Set: '&bThành công! &7%type% đặt thành %value%'
-    Remove: '&cLoại bỏ! &7Bạn đã loại bỏ world %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cLỗi! &7 Đầu vào không hợp lệ được cung cấp!'
+      actionbar:
+        enable: false
+        text: '&cLỗi! &7 Đầu vào không hợp lệ được cung cấp!'
+      title:
+        enable: false
+        text: '&cLỗi! &7 Đầu vào không hợp lệ được cung cấp!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bThành công! &7%type% đặt thành %value%'
+      actionbar:
+        enable: false
+        text: '&bThành công! &7%type% đặt thành %value%'
+      title:
+        enable: false
+        text: '&bThành công! &7%type% đặt thành %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cLoại bỏ! &7Bạn đã loại bỏ world %world%'
+      actionbar:
+        enable: false
+        text: '&cLoại bỏ! &7Bạn đã loại bỏ world %world%'
+      title:
+        enable: false
+        text: '&cLoại bỏ! &7Bạn đã loại bỏ world %world%'
+        subtitle:
+          enable: false
+          text: ''
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Help &e&m-----'
   Main: ' &7- &e/%command% &7- Dịch chuyển ngẫu nhiên!'

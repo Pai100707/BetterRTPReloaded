@@ -1,6 +1,9 @@
 package me.SuperRonanCraft.BetterRTP.references.file;
 
 import me.SuperRonanCraft.BetterRTP.BetterRTP;
+import me.SuperRonanCraft.BetterRTP.references.messages.MessagesCore;
+import me.SuperRonanCraft.BetterRTP.references.messages.delivery.BukkitMessageTree;
+import me.SuperRonanCraft.BetterRTP.references.messages.delivery.MessageValidator;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
@@ -46,14 +49,34 @@ public class FileLanguage implements FileData {
             InputStream in = plugin().getResource(fileName);
             if (in == null)
                 in = plugin().getResource(fileName.replace(File.separator, "/"));
+            YamlConfiguration bundled = null;
             if (in != null) {
-                config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(in)));
-                config.options().copyDefaults(true);
+                bundled = YamlConfiguration.loadConfiguration(new InputStreamReader(in, StandardCharsets.UTF_8));
                 in.close();
             }
+            //Custom language files have no bundled twin, the english one provides the texts for newly added delivery types
+            LangFileMigration.migrate(file, config, bundled != null ? bundled : bundledDefaults(defaultLangs[0]), plugin().getLogger());
+            if (bundled != null) {
+                config.setDefaults(bundled);
+                config.options().copyDefaults(true);
+            }
             config.save(file);
+            for (String warning : MessageValidator.validate(new BukkitMessageTree(config, true), MessagesCore.paths()))
+                plugin().getLogger().warning("[" + file.getName() + "] " + warning);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    /** Loads a bundled language file, null if it is not part of the jar. */
+    private YamlConfiguration bundledDefaults(String fName) {
+        String resource = "lang/" + fName;
+        try (InputStream in = plugin().getResource(resource)) {
+            if (in == null)
+                return null;
+            return YamlConfiguration.loadConfiguration(new InputStreamReader(in, StandardCharsets.UTF_8));
+        } catch (Exception e) {
+            return null;
         }
     }
 
@@ -76,6 +99,7 @@ public class FileLanguage implements FileData {
             "pl.yml", //Polish (Farum & TeksuSiK)
             "ro.yml", //Romanian (GamingXBlood)
             "ru.yml", //Russian (Logan)
+            "th.yml", //Thai
             "tr.yml", //Turkish (Erissos)
             "vi.yml", //Vietnamese (VoChiDanh#0862)
     };
@@ -104,10 +128,16 @@ public class FileLanguage implements FileData {
             InputStream in = plugin().getResource(fileNameDef);
             if (in == null)
                 in = plugin().getResource(fileNameDef.replace(File.separator, "/"));
+            YamlConfiguration bundled = null;
             if (in != null) {
-                config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(in, StandardCharsets.UTF_8)));
-                config.options().copyDefaults(true);
+                bundled = YamlConfiguration.loadConfiguration(new InputStreamReader(in, StandardCharsets.UTF_8));
                 in.close();
+            }
+            //Convert 3.6.x messages BEFORE the defaults are attached, otherwise the defaults would hide the old nodes
+            LangFileMigration.migrate(file, config, bundled, plugin().getLogger());
+            if (bundled != null) {
+                config.setDefaults(bundled);
+                config.options().copyDefaults(true);
             }
             config.save(file);
         } catch (Exception e) {

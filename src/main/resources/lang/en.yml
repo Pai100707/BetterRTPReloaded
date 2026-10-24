@@ -1,38 +1,375 @@
 # Help translate this file into more languages!
+#
+# Every message below can be delivered in several ways at the same time. Each delivery type has its own
+# `enable` switch and its own `text`; disabled types are simply not sent.
+#   chat:      normal chat message, the Messages.Prefix is put in front of it
+#   actionbar: text above the hotbar (no prefix)
+#   title:     big text in the middle of the screen. `subtitle` is the smaller line below it and can be
+#              enabled independently. Optional: fade-in / stay / fade-out (in ticks) next to `text`.
+#              Without them the normal server title timings are used.
+# Placeholders (%x%, %y%, %z%, %price%, %player%, %world%, %time%...) and & color codes work in every type.
+# Actionbar and title can only be shown to players. When the receiver is the console, the message is sent as
+# plain chat instead. If every delivery type of a message is disabled, the message is not sent at all.
+# Messages written the old way (`Paid: 'text'`) still work and are converted automatically on startup
+# (a backup of your file is kept next to it as <file>.pre-3.7.1.bak).
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success: ## Placeholders! %x% %y% and %z% are the x, y, and z coordinates that the player is being teleported to! #
-    Paid: '&aYou have been tp''d to&7 x=%x% y=%y% z=%z% for &c$%price%&7!'
-    Bypass: '&aYou have been tp''d to&7 x=%x% y=%y% z=%z%'
-    Loading: '&aSafe spot located! &7Loading chunks...'
-    Teleport: '&aTeleporting... &fplease wait while we find a safe location!'
+    Paid:
+      chat:
+        enable: true
+        text: '&aYou have been tp''d to&7 x=%x% y=%y% z=%z% for &c$%price%&7!'
+      actionbar:
+        enable: false
+        text: '&aTeleported to x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&aTeleport successful'
+        subtitle:
+          enable: false
+          text: '&7Enjoy your destination!'
+    Bypass:
+      chat:
+        enable: true
+        text: '&aYou have been tp''d to&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&aTeleported to x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&aTeleport successful'
+        subtitle:
+          enable: false
+          text: '&7Enjoy your destination!'
+    Loading:
+      chat:
+        enable: true
+        text: '&aSafe spot located! &7Loading chunks...'
+      actionbar:
+        enable: false
+        text: '&aSafe spot located! &7Loading chunks...'
+      title:
+        enable: false
+        text: '&aSafe spot located! &7Loading chunks...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTeleporting... &fplease wait while we find a safe location!'
+      actionbar:
+        enable: false
+        text: '&aTeleporting... &fplease wait while we find a safe location!'
+      title:
+        enable: false
+        text: '&aTeleporting... &fplease wait while we find a safe location!'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cCould not rtp because of insufficent funds! &7You must have atleast $%price% &7to rtp!'
-    NotSafe: '&cCould not find safe spot within %attempts% attempts! &7You were not RTP''d!'
-    Hunger: '&cCould not rtp because you are... &7too hungry&c, eat something fella!'
+    Price:
+      chat:
+        enable: true
+        text: '&cCould not rtp because of insufficent funds! &7You must have atleast $%price% &7to rtp!'
+      actionbar:
+        enable: false
+        text: '&cCould not rtp because of insufficent funds! &7You must have atleast $%price% &7to rtp!'
+      title:
+        enable: false
+        text: '&cCould not rtp because of insufficent funds! &7You must have atleast $%price% &7to rtp!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cCould not find safe spot within %attempts% attempts! &7You were not RTP''d!'
+      actionbar:
+        enable: false
+        text: '&cCould not find safe spot within %attempts% attempts! &7You were not RTP''d!'
+      title:
+        enable: false
+        text: '&cCould not find safe spot within %attempts% attempts! &7You were not RTP''d!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cCould not rtp because you are... &7too hungry&c, eat something fella!'
+      actionbar:
+        enable: false
+        text: '&cCould not rtp because you are... &7too hungry&c, eat something fella!'
+      title:
+        enable: false
+        text: '&cCould not rtp because you are... &7too hungry&c, eat something fella!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% has been tp''d to&7 x=%x% y=%y% z=%z%'
-    NotSafe: '&cCould not find safe spot within %attempts% attempts! &7%player% was not rtp''d!'
-    Biome: '&cSeems like the biome&7 %biome%&c does not exist! &7Try using the tab list!'
-  Reload: '&eConfig reloaded successfully!'
-  Update: '&7There is currently an update for &6BetterRTP &7version &e#%newVersion% &7you have version &e#%currentVersion%'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% has been tp''d to&7 x=%x% y=%y% z=%z%'
+      actionbar:
+        enable: false
+        text: '&a%player% has been tp''d to&7 x=%x% y=%y% z=%z%'
+      title:
+        enable: false
+        text: '&a%player% has been tp''d to&7 x=%x% y=%y% z=%z%'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cCould not find safe spot within %attempts% attempts! &7%player% was not rtp''d!'
+      actionbar:
+        enable: false
+        text: '&cCould not find safe spot within %attempts% attempts! &7%player% was not rtp''d!'
+      title:
+        enable: false
+        text: '&cCould not find safe spot within %attempts% attempts! &7%player% was not rtp''d!'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cSeems like the biome&7 %biome%&c does not exist! &7Try using the tab list!'
+      actionbar:
+        enable: false
+        text: '&cSeems like the biome&7 %biome%&c does not exist! &7Try using the tab list!'
+      title:
+        enable: false
+        text: '&cSeems like the biome&7 %biome%&c does not exist! &7Try using the tab list!'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eConfig reloaded successfully!'
+    actionbar:
+      enable: false
+      text: '&eConfig reloaded successfully!'
+    title:
+      enable: false
+      text: '&eConfig reloaded successfully!'
+      subtitle:
+        enable: false
+        text: ''
+  Update:
+    chat:
+      enable: true
+      text: '&7There is currently an update for &6BetterRTP &7version &e#%newVersion% &7you have version &e#%currentVersion%'
+    actionbar:
+      enable: false
+      text: '&7There is currently an update for &6BetterRTP &7version &e#%newVersion% &7you have version &e#%currentVersion%'
+    title:
+      enable: false
+      text: '&7There is currently an update for &6BetterRTP &7version &e#%newVersion% &7you have version &e#%currentVersion%'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cSorry! &7You don''t have permission to use this command! &8Permission: %permission%'
-    World: '&cSorry! &7You are not allowed rtp in the %world% world! &8Permission: %permission%'
-  DisabledWorld: '&cDisabled World %world%! &7Could not RTP!'
-  Cooldown: '&cSorry! &7You can''t rtp for another &c%time%&7!'
-  Locked: '&cSorry! &7You''ve used up all your RTP''s!'
-  Invalid: '&cInvalid argument. Try ''/%command% help'''
-  NotOnline: '&cThe player &7%player% &cis not online!'
-  Delay: '&aTeleporting in &f%time% &aseconds! Don''t move!'
-  Moved: '&cYou have moved! &7RTP was cancelled!'
-  NotExist: '&cLooks like the world &7%world% &cdoesn''t exist!'
-  Already: '&cWhoops! &7Looks like you are already rtp''ing, have some patience!'
-  Sign: '&7Command sign has been created! &7Command is... ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cSorry! &7You don''t have permission to use this command! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cSorry! &7You don''t have permission to use this command! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cSorry! &7You don''t have permission to use this command! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cSorry! &7You are not allowed rtp in the %world% world! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cSorry! &7You are not allowed rtp in the %world% world! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cSorry! &7You are not allowed rtp in the %world% world! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cDisabled World %world%! &7Could not RTP!'
+    actionbar:
+      enable: false
+      text: '&cDisabled World %world%! &7Could not RTP!'
+    title:
+      enable: false
+      text: '&cDisabled World %world%! &7Could not RTP!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cSorry! &7You can''t rtp for another &c%time%&7!'
+    actionbar:
+      enable: false
+      text: '&cSorry! &7You can''t rtp for another &c%time%&7!'
+    title:
+      enable: false
+      text: '&cSorry! &7You can''t rtp for another &c%time%&7!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cSorry! &7You''ve used up all your RTP''s!'
+    actionbar:
+      enable: false
+      text: '&cSorry! &7You''ve used up all your RTP''s!'
+    title:
+      enable: false
+      text: '&cSorry! &7You''ve used up all your RTP''s!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cInvalid argument. Try ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cInvalid argument. Try ''/%command% help'''
+    title:
+      enable: false
+      text: '&cInvalid argument. Try ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cThe player &7%player% &cis not online!'
+    actionbar:
+      enable: false
+      text: '&cThe player &7%player% &cis not online!'
+    title:
+      enable: false
+      text: '&cThe player &7%player% &cis not online!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeleporting in &f%time% &aseconds! Don''t move!'
+    actionbar:
+      enable: false
+      text: '&aTeleporting in &f%time% &aseconds! Don''t move!'
+    title:
+      enable: false
+      text: '&aTeleporting in &f%time% &aseconds! Don''t move!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cYou have moved! &7RTP was cancelled!'
+    actionbar:
+      enable: false
+      text: '&cYou have moved! &7RTP was cancelled!'
+    title:
+      enable: false
+      text: '&cYou have moved! &7RTP was cancelled!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cLooks like the world &7%world% &cdoesn''t exist!'
+    actionbar:
+      enable: false
+      text: '&cLooks like the world &7%world% &cdoesn''t exist!'
+    title:
+      enable: false
+      text: '&cLooks like the world &7%world% &cdoesn''t exist!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cWhoops! &7Looks like you are already rtp''ing, have some patience!'
+    actionbar:
+      enable: false
+      text: '&cWhoops! &7Looks like you are already rtp''ing, have some patience!'
+    title:
+      enable: false
+      text: '&cWhoops! &7Looks like you are already rtp''ing, have some patience!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Command sign has been created! &7Command is... ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Command sign has been created! &7Command is... ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7Command sign has been created! &7Command is... ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cError! &7Invalid input provided!'
-    Set: '&bSuccess! &7%type% set to %value%'
-    Remove: '&cRemoved! &7You removed the Custom World %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cError! &7Invalid input provided!'
+      actionbar:
+        enable: false
+        text: '&cError! &7Invalid input provided!'
+      title:
+        enable: false
+        text: '&cError! &7Invalid input provided!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&bSuccess! &7%type% set to %value%'
+      actionbar:
+        enable: false
+        text: '&bSuccess! &7%type% set to %value%'
+      title:
+        enable: false
+        text: '&bSuccess! &7%type% set to %value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cRemoved! &7You removed the Custom World %world%'
+      actionbar:
+        enable: false
+        text: '&cRemoved! &7You removed the Custom World %world%'
+      title:
+        enable: false
+        text: '&cRemoved! &7You removed the Custom World %world%'
+        subtitle:
+          enable: false
+          text: ''
 
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Help &e&m-----'

@@ -1,37 +1,350 @@
+# Every message can be delivered as chat, actionbar and/or title. See en.yml for a description of the options.
 # Help translate this file into more languages!
 Messages:
   Prefix: '&7[&6BetterRTP&7] '
   Success:
-    Paid: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi, pagando &c$%price%&7! '
-    Bypass: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z%!'
-    Loading: '&aLuogo sicuro localizzato! &7Caricamento...'
-    Teleport: '&aTeletrasporto in corso... ricerca di un luogo sicuro...'
+    Paid:
+      chat:
+        enable: true
+        text: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi, pagando &c$%price%&7! '
+      actionbar:
+        enable: false
+        text: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi, pagando &c$%price%&7! '
+      title:
+        enable: false
+        text: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi, pagando &c$%price%&7! '
+        subtitle:
+          enable: false
+          text: ''
+    Bypass:
+      chat:
+        enable: true
+        text: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z%!'
+      actionbar:
+        enable: false
+        text: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z%!'
+      title:
+        enable: false
+        text: '&aSei stato teletrasportato a&7 x=%x% y=%y% z=%z%!'
+        subtitle:
+          enable: false
+          text: ''
+    Loading:
+      chat:
+        enable: true
+        text: '&aLuogo sicuro localizzato! &7Caricamento...'
+      actionbar:
+        enable: false
+        text: '&aLuogo sicuro localizzato! &7Caricamento...'
+      title:
+        enable: false
+        text: '&aLuogo sicuro localizzato! &7Caricamento...'
+        subtitle:
+          enable: false
+          text: ''
+    Teleport:
+      chat:
+        enable: true
+        text: '&aTeletrasporto in corso... ricerca di un luogo sicuro...'
+      actionbar:
+        enable: false
+        text: '&aTeletrasporto in corso... ricerca di un luogo sicuro...'
+      title:
+        enable: false
+        text: '&aTeletrasporto in corso... ricerca di un luogo sicuro...'
+        subtitle:
+          enable: false
+          text: ''
   Failed:
-    Price: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi spendere $%price% per teletrasportarti randomicamente!'
-    NotSafe: '&cTeletrasporto non avvenuto per la seguente ragione: &fluogo sicuro non localizzato dopo %attempts% tentativi!'
-    Hunger: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi recuperare la fame prima di teletrasportarti!'
+    Price:
+      chat:
+        enable: true
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi spendere $%price% per teletrasportarti randomicamente!'
+      actionbar:
+        enable: false
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi spendere $%price% per teletrasportarti randomicamente!'
+      title:
+        enable: false
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi spendere $%price% per teletrasportarti randomicamente!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fluogo sicuro non localizzato dopo %attempts% tentativi!'
+      actionbar:
+        enable: false
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fluogo sicuro non localizzato dopo %attempts% tentativi!'
+      title:
+        enable: false
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fluogo sicuro non localizzato dopo %attempts% tentativi!'
+        subtitle:
+          enable: false
+          text: ''
+    Hunger:
+      chat:
+        enable: true
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi recuperare la fame prima di teletrasportarti!'
+      actionbar:
+        enable: false
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi recuperare la fame prima di teletrasportarti!'
+      title:
+        enable: false
+        text: '&cTeletrasporto non avvenuto per la seguente ragione: &fdevi recuperare la fame prima di teletrasportarti!'
+        subtitle:
+          enable: false
+          text: ''
   Other:
-    Success: '&a%player% è stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi!'
-    NotSafe: '&cTeletrasporto non avvenuto in seguito a %attempts% tentativi! &7%player% non è stato spostato, perché nessun luogo sicuro è stato trovato.'
-    Biome: '&cIl bioma &fc%biome%&c non esiste! &7Prova a utilizzare la lista inclusa nel Tab completer.'
-  Reload: '&eConfigurazioni riavviate con successo!'
+    Success:
+      chat:
+        enable: true
+        text: '&a%player% è stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi!'
+      actionbar:
+        enable: false
+        text: '&a%player% è stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi!'
+      title:
+        enable: false
+        text: '&a%player% è stato teletrasportato a&7 x=%x% y=%y% z=%z% in &f%attempts% &7tentativi!'
+        subtitle:
+          enable: false
+          text: ''
+    NotSafe:
+      chat:
+        enable: true
+        text: '&cTeletrasporto non avvenuto in seguito a %attempts% tentativi! &7%player% non è stato spostato, perché nessun luogo sicuro è stato trovato.'
+      actionbar:
+        enable: false
+        text: '&cTeletrasporto non avvenuto in seguito a %attempts% tentativi! &7%player% non è stato spostato, perché nessun luogo sicuro è stato trovato.'
+      title:
+        enable: false
+        text: '&cTeletrasporto non avvenuto in seguito a %attempts% tentativi! &7%player% non è stato spostato, perché nessun luogo sicuro è stato trovato.'
+        subtitle:
+          enable: false
+          text: ''
+    Biome:
+      chat:
+        enable: true
+        text: '&cIl bioma &fc%biome%&c non esiste! &7Prova a utilizzare la lista inclusa nel Tab completer.'
+      actionbar:
+        enable: false
+        text: '&cIl bioma &fc%biome%&c non esiste! &7Prova a utilizzare la lista inclusa nel Tab completer.'
+      title:
+        enable: false
+        text: '&cIl bioma &fc%biome%&c non esiste! &7Prova a utilizzare la lista inclusa nel Tab completer.'
+        subtitle:
+          enable: false
+          text: ''
+  Reload:
+    chat:
+      enable: true
+      text: '&eConfigurazioni riavviate con successo!'
+    actionbar:
+      enable: false
+      text: '&eConfigurazioni riavviate con successo!'
+    title:
+      enable: false
+      text: '&eConfigurazioni riavviate con successo!'
+      subtitle:
+        enable: false
+        text: ''
   NoPermission:
-    Basic: '&cNon hai il permesso di usare questo comando! &8Permission: %permission%'
-    World: '&cNon hai i permessi per teletrasportati nel mondo &f%world%&c! &8Permission: %permission%'
-  DisabledWorld: '&cIl mondo &f%world%&c è disabilitato! &7Teletrasporto non avvenuto!'
-  Cooldown: '&cAttendi ancora &f%time% &cprima di teletrasportarti nuovamente!'
-  Locked: '&cHai esaurito tutti i tuoi RTP disponibili!'
-  Invalid: '&cArgomento non valido, digita ''/%command% help'''
-  NotOnline: '&cIl giocatore &7%player% &cnon è online!'
-  Delay: '&aTeletrasporto fra &f%time% &asecondi! NON MUOVERTI!'
-  Moved: '&cTi sei mosso, l''&7RTP è stato cancellato!'
-  NotExist: '&cIl mondo &7%world% &cnon esiste!'
-  Already: '&cAttendi, un teletrasporto è già in corso!'
-  Sign: '&7Cartello creato, il comando che eseguirà è: ''&f/rtp %command%&7'''
+    Basic:
+      chat:
+        enable: true
+        text: '&cNon hai il permesso di usare questo comando! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cNon hai il permesso di usare questo comando! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cNon hai il permesso di usare questo comando! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+    World:
+      chat:
+        enable: true
+        text: '&cNon hai i permessi per teletrasportati nel mondo &f%world%&c! &8Permission: %permission%'
+      actionbar:
+        enable: false
+        text: '&cNon hai i permessi per teletrasportati nel mondo &f%world%&c! &8Permission: %permission%'
+      title:
+        enable: false
+        text: '&cNon hai i permessi per teletrasportati nel mondo &f%world%&c! &8Permission: %permission%'
+        subtitle:
+          enable: false
+          text: ''
+  DisabledWorld:
+    chat:
+      enable: true
+      text: '&cIl mondo &f%world%&c è disabilitato! &7Teletrasporto non avvenuto!'
+    actionbar:
+      enable: false
+      text: '&cIl mondo &f%world%&c è disabilitato! &7Teletrasporto non avvenuto!'
+    title:
+      enable: false
+      text: '&cIl mondo &f%world%&c è disabilitato! &7Teletrasporto non avvenuto!'
+      subtitle:
+        enable: false
+        text: ''
+  Cooldown:
+    chat:
+      enable: true
+      text: '&cAttendi ancora &f%time% &cprima di teletrasportarti nuovamente!'
+    actionbar:
+      enable: false
+      text: '&cAttendi ancora &f%time% &cprima di teletrasportarti nuovamente!'
+    title:
+      enable: false
+      text: '&cAttendi ancora &f%time% &cprima di teletrasportarti nuovamente!'
+      subtitle:
+        enable: false
+        text: ''
+  Locked:
+    chat:
+      enable: true
+      text: '&cHai esaurito tutti i tuoi RTP disponibili!'
+    actionbar:
+      enable: false
+      text: '&cHai esaurito tutti i tuoi RTP disponibili!'
+    title:
+      enable: false
+      text: '&cHai esaurito tutti i tuoi RTP disponibili!'
+      subtitle:
+        enable: false
+        text: ''
+  Invalid:
+    chat:
+      enable: true
+      text: '&cArgomento non valido, digita ''/%command% help'''
+    actionbar:
+      enable: false
+      text: '&cArgomento non valido, digita ''/%command% help'''
+    title:
+      enable: false
+      text: '&cArgomento non valido, digita ''/%command% help'''
+      subtitle:
+        enable: false
+        text: ''
+  NotOnline:
+    chat:
+      enable: true
+      text: '&cIl giocatore &7%player% &cnon è online!'
+    actionbar:
+      enable: false
+      text: '&cIl giocatore &7%player% &cnon è online!'
+    title:
+      enable: false
+      text: '&cIl giocatore &7%player% &cnon è online!'
+      subtitle:
+        enable: false
+        text: ''
+  Delay:
+    chat:
+      enable: true
+      text: '&aTeletrasporto fra &f%time% &asecondi! NON MUOVERTI!'
+    actionbar:
+      enable: false
+      text: '&aTeletrasporto fra &f%time% &asecondi! NON MUOVERTI!'
+    title:
+      enable: false
+      text: '&aTeletrasporto fra &f%time% &asecondi! NON MUOVERTI!'
+      subtitle:
+        enable: false
+        text: ''
+  Moved:
+    chat:
+      enable: true
+      text: '&cTi sei mosso, l''&7RTP è stato cancellato!'
+    actionbar:
+      enable: false
+      text: '&cTi sei mosso, l''&7RTP è stato cancellato!'
+    title:
+      enable: false
+      text: '&cTi sei mosso, l''&7RTP è stato cancellato!'
+      subtitle:
+        enable: false
+        text: ''
+  NotExist:
+    chat:
+      enable: true
+      text: '&cIl mondo &7%world% &cnon esiste!'
+    actionbar:
+      enable: false
+      text: '&cIl mondo &7%world% &cnon esiste!'
+    title:
+      enable: false
+      text: '&cIl mondo &7%world% &cnon esiste!'
+      subtitle:
+        enable: false
+        text: ''
+  Already:
+    chat:
+      enable: true
+      text: '&cAttendi, un teletrasporto è già in corso!'
+    actionbar:
+      enable: false
+      text: '&cAttendi, un teletrasporto è già in corso!'
+    title:
+      enable: false
+      text: '&cAttendi, un teletrasporto è già in corso!'
+      subtitle:
+        enable: false
+        text: ''
+  Sign:
+    chat:
+      enable: true
+      text: '&7Cartello creato, il comando che eseguirà è: ''&f/rtp %command%&7'''
+    actionbar:
+      enable: false
+      text: '&7Cartello creato, il comando che eseguirà è: ''&f/rtp %command%&7'''
+    title:
+      enable: false
+      text: '&7Cartello creato, il comando che eseguirà è: ''&f/rtp %command%&7'''
+      subtitle:
+        enable: false
+        text: ''
   Edit:
-    Error: '&cErrore! &7Input digitato non corretto!'
-    Set: '&f%type% &aimpostato su &f%value%'
-    Remove: '&cRimosso il mondo %world%'
+    Error:
+      chat:
+        enable: true
+        text: '&cErrore! &7Input digitato non corretto!'
+      actionbar:
+        enable: false
+        text: '&cErrore! &7Input digitato non corretto!'
+      title:
+        enable: false
+        text: '&cErrore! &7Input digitato non corretto!'
+        subtitle:
+          enable: false
+          text: ''
+    Set:
+      chat:
+        enable: true
+        text: '&f%type% &aimpostato su &f%value%'
+      actionbar:
+        enable: false
+        text: '&f%type% &aimpostato su &f%value%'
+      title:
+        enable: false
+        text: '&f%type% &aimpostato su &f%value%'
+        subtitle:
+          enable: false
+          text: ''
+    Remove:
+      chat:
+        enable: true
+        text: '&cRimosso il mondo %world%'
+      actionbar:
+        enable: false
+        text: '&cRimosso il mondo %world%'
+      title:
+        enable: false
+        text: '&cRimosso il mondo %world%'
+        subtitle:
+          enable: false
+          text: ''
 Help:
   Prefix: '&e&m-----&6&l BetterRTP &8| Help &e&m-----'
   Main: ' &7- &e/%command% &7- Teletrasporto randomico!'
